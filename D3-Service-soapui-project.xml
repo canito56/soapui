@@ -1,0 +1,2587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="05996de1-e8f7-42fc-a5e5-10047ad2018e" activeEnvironment="Default" name="D3 Service" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="50789e71-f2d1-474a-b598-61ace0984c79" wsaVersion="NONE" name="D3WSbinding" type="wsdl" bindingName="{ws.dvelop.com}D3WSbinding" soapVersion="1_1" anonymous="optional" definition="http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS?wsdl"><con:part><con:url>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="ws.dvelop.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="ws.dvelop.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <wsdl:documentation>Document management service using the D3 proxy endpoint.</wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="ws.dvelop.com" xmlns="ws.dvelop.com">
+      <xsd:complexType name="TWSPingData">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="string" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="base64Binary" type="xsd:base64Binary"/>
+          <xsd:element minOccurs="0" name="int" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="time" type="xsd:time"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TArchiv">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="IpAddr" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Port" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Server" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="User" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Password" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Language" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="arch" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TDeleteDocumentExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TReserveNextDocIDExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="reserved_doc_id_header" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="reserved_doc_id_suffix" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSendDependentDocumentExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="temporary_filename" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TValidateAttributesExport">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="field_no_with_error" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TCheckIfNewVersionRequiredExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="required" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TTransferDocumentExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetPhysicalFileInformationItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="alteration_number" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="alteration_text" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="alteration_timestamp" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="archive_index" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="archive_date" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="localization" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="size_kb" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="external_device_number" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dependent_documents" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="WSDownloadURL" type="xsd:anyURI"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSetKeywordsForDocumentExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="corpus" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TReadWorklistExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TReadWorklistItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TWriteWorklistExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TWriteWorklistItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFilesReceivedExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFilesReceivedItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="sender" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="recipient" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_received" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="notice" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="timestamp_sent" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="timestamp_acknowledged" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_acknowledged_until" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="chain_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="holdfile_type" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="holdfile_read" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFilesSentExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFilesSentItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="sender" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="recipient" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_remember" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="notice" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="timestamp_sent" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="timestamp_acknowledged" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_acknowledged_until" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="chain_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_received" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSendHoldFileExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="checkout_text" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetMultipleAttributesItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="field_no" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="value" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="data_type" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="row_number" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetStructureDocumentExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetStructureDocumentTable">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="TGetStructureDocumentItem"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetStructureDocumentItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_short" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="caption" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="parent" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="child" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TRemoveSentHoldFileFromSenderListExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TAcknowledgeReceivedHoldFileExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TCheckExistenceOfNewHoldFilesExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="last_config_modification" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetFileAlterationHistoryExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetFileAlterationHistoryItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="alteration_number" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="alteration_text" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="alteration_timestamp" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="verified_by_user" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="verification_date" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="released_data" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="blocked_date" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="released_blocked_by_user" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TChangeHoldFileRecipientExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFileChainExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFileChainItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="sender" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="recipient" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_received" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="notice" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="timestamp_sent" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="timestamp_acknowledged" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_acknowledged" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="chain_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFileInfoExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFileInfoItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="username" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="username_dms" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_received" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="timestamp_sent" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetClassesForDocumentExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetClassesForDocumentItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="class_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="class_text" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetExtendedPropertiesExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="date_of_import" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="date_last_access" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="user_last_access" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="timestamp_last_update_file" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="user_last_modified" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetUserInGroupExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetMultipleAttributesExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetValidValuesForAttributeExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSearchDocumentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="max_number_of_docs" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="doc_number" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_short" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="var_number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="user" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date1" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="date2" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="search_modified_tstamp_1" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="search_modified_tstamp_2" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="web_published" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="owner" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_extension" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="text" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="searchtext_expression" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_fields" type="TDocFields"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TDownloadUrlFormat">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="encoded" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="outputFormat" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TInsertDependentDocumentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="suffix" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TDeleteDocumentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="reason" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TVerifyDocumentImport">
+        <xsd:sequence>
+          <xsd:element name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="release_included" type="xsd:boolean"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetUserInGroupImport">
+        <xsd:sequence>
+          <xsd:element name="user" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TReleaseDocumentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="asynchronous" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="unblock" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetValidValuesForAttributeImport">
+        <xsd:sequence>
+          <xsd:element name="document_type_short" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="field_number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="row_number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="max_number_of_docs" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="doc_number" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_short" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="var_number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="user" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date1" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="date2" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="search_modified_tstamp_1" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="search_modified_tstamp_2" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="web_published" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="owner" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_extension" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="searchtext_expression" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dsearch_similar_doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dsearch_min_relevance" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dsearch_want_hints" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dsearch_by_example" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="codepage" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="doc_fields" type="TDocFields"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TReserveNextDocIDImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_type_short" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSendDependentDocumentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="temporary_filename" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_extension" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="ocr_file" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TValidateAttributesImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="function" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="nextcall" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="max_number_of_docs" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="doc_number" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_short" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_long" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="temporary_filename" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_filename" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_directory" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="var_number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="user" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date1" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="date2" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="search_modified_tstamp_1" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="search_modified_tstamp_2" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="web_published" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="owner" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_extension" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="text" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="searchtext_expression" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_fields" type="TDocFields"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TBlockDocumentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TCheckIfNewVersionRequiredImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TTransferDocumentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="source_status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="destination_status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="destination_user_group" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="asynchronous" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="alteration_text" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="archive_index" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetPhysicalFileInformationImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TChangePasswordforUserImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="new_password" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSetKeywordsForDocumentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="version" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="update" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFilesReceivedImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="date_received_1" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_received_2" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="sender" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="new_ones" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFilesSentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="date_sent_1" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_sent_2" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="recipient" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="critical" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="remember" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSendHoldFileImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="recipient" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="chain_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="notice" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_acknowledge_until" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_remember" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_activate_hold_file" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="ignore_checkout" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="expand_group_members" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetMultipleAttributesImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetStructureDocumentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="direction" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TRemoveSentHoldFileFromSenderListImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="chain_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="recipient" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TAcknowledgeReceivedHoldFileImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="chain_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="group_recipient" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="workflow_only" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetFileAlterationHistoryImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TChangeHoldFileRecipientImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="chain_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="recipient_old" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="recipient_new" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="sender" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="notice" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="tstamp_sent" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TWriteRedlineImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="filename" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFileChainImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="chain_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetHoldFileInfoImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetClassesForDocumentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TGetExtendedPropertiesImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TCheckInOutImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="in_or_out" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="checkout_text" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TDownloadUrlParameter">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="filename" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="archive_index" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_ext" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_editor" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="access_key" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TD3Response">
+        <xsd:sequence>
+          <xsd:element name="ReturnCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="ReturnMessage" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="WSXmlTime" type="xsd:int" use="required"/>
+        <xsd:attribute name="WSD3Time" type="xsd:int" use="required"/>
+        <xsd:attribute name="WSCallNumber" type="xsd:int" use="required"/>
+      </xsd:complexType>
+      <xsd:complexType name="TD3Request">
+        <xsd:sequence>
+          <xsd:element name="archiv" type="TArchiv"/>
+        </xsd:sequence>
+        <xsd:attribute name="debug" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="MTOM" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="TValidatePasswordForUserImport">
+        <xsd:sequence>
+          <xsd:element name="user" type="xsd:string"/>
+          <xsd:element name="password" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="package" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSearchDocumentExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="files_refused" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dsearch_used_words" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dsearch_hint_words" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dsearch_corrections" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TDocumentItems">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="TDocumentItem">
+            <xsd:key name="doc">
+              <xsd:selector xpath="item"/>
+              <xsd:field xpath="item/doc_id"/>
+            </xsd:key>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TUserInGroupItems">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="TUserInGroupItem"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TPhysicalFileInformationItems">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="TPhysicalFileInformationItem"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TMultipleAttributeItems">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="TMultipleAttributeItem"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TMultipleAttributeItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="field_no" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="value" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="data_type" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="row_number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TValidValuesForAttributeItems">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="TValidValuesForAttributeItem"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TValidValuesForAttributeItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="field_no" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="value" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="data_type" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TDocumentItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_short" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_number" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="var_number" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_1" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_2" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_3" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_4" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="orig_filename" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_ext" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_status_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_editor" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="size_kb" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="owner" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="date_of_import" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="last_alteration_number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="last_alteration_timestamp" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="alteration_number_released" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="caption" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="web_published" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="access_key_B" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="access_key_P" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="access_key_F" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="access_key_A" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_permission" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dependent_documents" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dependent_documents_in_public" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="old_archive_suffix" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="filter" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="creation_program" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="creation_program_version" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="plant" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="department" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="creator" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="responsable" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="relevance" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="signature" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="origin" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="size_byte" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="dependent_documents_byte" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dependent_documents_in_public_byte" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_type" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="codepage" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="doc_ext_in_public" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_fields" type="TDocFields"/>
+          <xsd:element minOccurs="0" name="WSDownloadURL" type="xsd:anyURI"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TUserInGroupItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="usergroup" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TPhysicalFileInformationItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="alteration_number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="alteration_text" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="alteration_timestamp" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="archive_index" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="archive_date" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="doc_status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="localization" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="size_kb" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="external_device_number" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="dependent_documents" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="size_byte" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="dependent_documents_byte" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="hash_value" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="hash_checked" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="doc_ext" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="WSDownloadURL" type="xsd:anyURI"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TImportDocumentImport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="temporary_filename" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_number" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_long" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_short" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="var_number" type="xsd:string"/>
+          <xsd:element name="doc_status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="user" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_fields" type="TDocFields"/>
+          <xsd:element minOccurs="0" name="doc_filename" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_extension" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_directory" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_1" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_2" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_3" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_4" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="transfer_synchron" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="holdfile_user" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="holdfile_date" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="holdfile_notice" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="holdfile_date_remember" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="holdfile_date_acknowledge_until" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="book_attribute" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="reserved_doc_id_header" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="reserved_doc_id_suffix" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="reject_duplicates" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="import_hash" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="asynchronous" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="batch_alteration_number" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TImportDocumentExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="time_stamp" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="transfer_error" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TImportNewVersionDocumentExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="time_stamp_out" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="transfer_error" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TImportNewVersionDocumentImport">
+        <xsd:sequence>
+          <xsd:element name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="attribute_overwrite" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="temporary_filename" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_number" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_long" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_short" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="var_number" type="xsd:string"/>
+          <xsd:element name="doc_status" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="user" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_fields" type="TDocFields"/>
+          <xsd:element minOccurs="0" name="doc_filename" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_extension" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_directory" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_1" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_2" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_3" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_4" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="transfer_synchron" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="holdfile_user" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="holdfile_date" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="holdfile_notice" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TImportNewVersionDocumentResponse">
+        <xsd:complexContent>
+          <xsd:extension base="TD3Response">
+            <xsd:sequence>
+              <xsd:element name="export" type="TImportNewVersionDocumentExport"/>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TSearchDocumentInIDListItem">
+        <xsd:sequence>
+          <xsd:element name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSearchDocumentInIDListTable">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="item" type="TSearchDocumentInIDListItem"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSearchDocumentInIDListExport">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TDocField">
+        <xsd:attribute name="field_no" type="xsd:int" use="required"/>
+        <xsd:attribute name="row_no" type="xsd:int" use="optional"/>
+        <xsd:attribute name="value" type="xsd:string" use="required"/>
+      </xsd:complexType>
+      <xsd:complexType name="TDocFields">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="doc_field" type="TDocField"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSendNoteImport">
+        <xsd:sequence>
+          <xsd:element name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TReceiveNoteImport">
+        <xsd:sequence>
+          <xsd:element name="doc_id" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TUpdateAttributesImport">
+        <xsd:sequence>
+          <xsd:element name="doc_id" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_type_short" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_1" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_2" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_3" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_text_4" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="doc_fields" type="TDocFields"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TUpdateAttributesExport">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="field_no_with_error" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="WSPingRequest" type="TWSPingData"/>
+      <xsd:element name="WSPingResponse" type="TWSPingData"/>
+      <xsd:element name="WSInfoRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="params" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="WSInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="version" type="xsd:string"/>
+            <xsd:element name="startTime" type="xsd:dateTime"/>
+            <xsd:element name="callCount" type="xsd:int"/>
+            <xsd:element name="memoryUsed" type="xsd:int"/>
+            <xsd:element name="memoryFree" type="xsd:int"/>
+            <xsd:element name="memoryAvailable" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ValidatePasswordForUserRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="import" type="TValidatePasswordForUserImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ValidatePasswordForUserResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="bytes" type="xsd:base64Binary"/>
+                <xsd:element minOccurs="0" name="import" type="TValidatePasswordForUserImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SearchDocumentRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TSearchDocumentImport"/>
+                <xsd:element minOccurs="0" name="WSDownloadFormat" type="TDownloadUrlFormat"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SearchDocumentResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TSearchDocumentExport"/>
+                <xsd:element name="table" type="TDocumentItems"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ImportDocumentRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TImportDocumentImport"/>
+                <xsd:element name="bytes" type="xsd:base64Binary"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ImportDocumentResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TImportDocumentExport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ImportNewVersionDocumentRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TImportNewVersionDocumentImport"/>
+                <xsd:element name="bytes" type="xsd:base64Binary"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ImportNewVersionDocumentResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TImportNewVersionDocumentExport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SearchDocumentInIDListRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="table" type="TSearchDocumentInIDListTable"/>
+                <xsd:element minOccurs="0" name="WSDownloadFormat" type="TDownloadUrlFormat"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SearchDocumentInIDListResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TSearchDocumentInIDListExport"/>
+                <xsd:element name="table" type="TDocumentItems"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendNoteRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TSendNoteImport"/>
+                <xsd:element name="bytes" type="xsd:base64Binary"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendNoteResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence/>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReceiveNoteRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TReceiveNoteImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReceiveNoteResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="bytes" type="xsd:base64Binary"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetStructureDocumentRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TGetStructureDocumentImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetStructureDocumentResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TGetStructureDocumentExport"/>
+                <xsd:element name="table" type="TGetStructureDocumentTable"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateAttributesRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TUpdateAttributesImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateAttributesResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TUpdateAttributesExport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ValidateAttributesRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TValidateAttributesImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ValidateAttributesResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TValidateAttributesExport"/>
+                <xsd:element name="import" type="TValidateAttributesImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="TransferDocumentRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TTransferDocumentImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="TransferDocumentResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TTransferDocumentExport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeleteDocumentRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TDeleteDocumentImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeleteDocumentResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TDeleteDocumentExport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUserInGroupRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TGetUserInGroupImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUserInGroupResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TGetUserInGroupExport"/>
+                <xsd:element name="table" type="TUserInGroupItems"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPhysicalFileInformationRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TGetPhysicalFileInformationImport"/>
+                <xsd:element minOccurs="0" name="WSDownloadFormat" type="TDownloadUrlFormat"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPhysicalFileInformationResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="table" type="TPhysicalFileInformationItems"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetMultipleAttributesRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TGetMultipleAttributesImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetMultipleAttributesResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TGetMultipleAttributesExport"/>
+                <xsd:element name="table" type="TMultipleAttributeItems"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VerifyDocumentRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TVerifyDocumentImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VerifyDocumentResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response"/>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReleaseDocumentRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TReleaseDocumentImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReleaseDocumentResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response"/>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetValidValuesForAttributeRequest">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Request">
+              <xsd:sequence>
+                <xsd:element name="import" type="TGetValidValuesForAttributeImport"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetValidValuesForAttributeResponse">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TD3Response">
+              <xsd:sequence>
+                <xsd:element name="export" type="TGetValidValuesForAttributeExport"/>
+                <xsd:element name="table" type="TValidValuesForAttributeItems"/>
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SendNoteResponse">
+    <wsdl:part name="out" element="tns:SendNoteResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReleaseDocumentResponse">
+    <wsdl:part name="out" element="tns:ReleaseDocumentResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WSPingResponse">
+    <wsdl:part name="out" element="tns:WSPingResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetPhysicalFileInformationResponse">
+    <wsdl:part name="out" element="tns:GetPhysicalFileInformationResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SendNoteRequest">
+    <wsdl:part name="in" element="tns:SendNoteRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ImportDocumentRequest">
+    <wsdl:part name="in" element="tns:ImportDocumentRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReceiveNoteResponse">
+    <wsdl:part name="out" element="tns:ReceiveNoteResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetStructureDocumentRequest">
+    <wsdl:part name="in" element="tns:GetStructureDocumentRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SearchDocumentInIDListResponse">
+    <wsdl:part name="out" element="tns:SearchDocumentInIDListResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetValidValuesForAttributeResponse">
+    <wsdl:part name="out" element="tns:GetValidValuesForAttributeResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WSInfoRequest">
+    <wsdl:part name="in" element="tns:WSInfoRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SearchDocumentRequest">
+    <wsdl:part name="in" element="tns:SearchDocumentRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetMultipleAttributesResponse">
+    <wsdl:part name="out" element="tns:GetMultipleAttributesResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetStructureDocumentResponse">
+    <wsdl:part name="out" element="tns:GetStructureDocumentResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="TransferDocumentResponse">
+    <wsdl:part name="out" element="tns:TransferDocumentResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VerifyDocumentRequest">
+    <wsdl:part name="in" element="tns:VerifyDocumentRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DeleteDocumentRequest">
+    <wsdl:part name="in" element="tns:DeleteDocumentRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetPhysicalFileInformationRequest">
+    <wsdl:part name="in" element="tns:GetPhysicalFileInformationRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetUserInGroupRequest">
+    <wsdl:part name="in" element="tns:GetUserInGroupRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetUserInGroupResponse">
+    <wsdl:part name="out" element="tns:GetUserInGroupResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UpdateAttributesRequest">
+    <wsdl:part name="in" element="tns:UpdateAttributesRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="TransferDocumentRequest">
+    <wsdl:part name="in" element="tns:TransferDocumentRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VerifyDocumentResponse">
+    <wsdl:part name="out" element="tns:VerifyDocumentResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetMultipleAttributesRequest">
+    <wsdl:part name="in" element="tns:GetMultipleAttributesRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ImportDocumentResponse">
+    <wsdl:part name="out" element="tns:ImportDocumentResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WSPingRequest">
+    <wsdl:part name="in" element="tns:WSPingRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ValidateAttributesRequest">
+    <wsdl:part name="in" element="tns:ValidateAttributesRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ValidatePasswordForUser1Response">
+    <wsdl:part name="out" element="tns:ValidatePasswordForUserResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ValidateAttributesResponse">
+    <wsdl:part name="out" element="tns:ValidateAttributesResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ImportNewVersionDocumentRequest">
+    <wsdl:part name="in" element="tns:ImportNewVersionDocumentRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ImportNewVersionDocumentResponse">
+    <wsdl:part name="out" element="tns:ImportNewVersionDocumentResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DeleteDocumentResponse">
+    <wsdl:part name="out" element="tns:DeleteDocumentResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ValidatePasswordForUser1Request">
+    <wsdl:part name="in" element="tns:ValidatePasswordForUserRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetValidValuesForAttributeRequest">
+    <wsdl:part name="in" element="tns:GetValidValuesForAttributeRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UpdateAttributesResponse">
+    <wsdl:part name="out" element="tns:UpdateAttributesResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SearchDocumentInIDListRequest">
+    <wsdl:part name="in" element="tns:SearchDocumentInIDListRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SearchDocumentResponse">
+    <wsdl:part name="out" element="tns:SearchDocumentResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WSInfoResponse">
+    <wsdl:part name="out" element="tns:WSInfoResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReleaseDocumentRequest">
+    <wsdl:part name="in" element="tns:ReleaseDocumentRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReceiveNoteRequest">
+    <wsdl:part name="in" element="tns:ReceiveNoteRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="D3WServicePortType">
+    <wsdl:operation name="ReleaseDocument">
+      <wsdl:input message="tns:ReleaseDocumentRequest" wsaw:Action="ws.dvelop.com/ReleaseDocument"></wsdl:input>
+      <wsdl:output message="tns:ReleaseDocumentResponse" wsaw:Action="ws.dvelop.com/D3WS/ReleaseDocument"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleAttributes">
+      <wsdl:input message="tns:GetMultipleAttributesRequest" wsaw:Action="ws.dvelop.com/GetMultipleAttributes"></wsdl:input>
+      <wsdl:output message="tns:GetMultipleAttributesResponse" wsaw:Action="ws.dvelop.com/D3WS/GetMultipleAttributes"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDocumentInIDList">
+      <wsdl:input message="tns:SearchDocumentInIDListRequest" wsaw:Action="ws.dvelop.com/SearchDocumentInIDList"></wsdl:input>
+      <wsdl:output message="tns:SearchDocumentInIDListResponse" wsaw:Action="ws.dvelop.com/D3WS/SearchDocumentInIDListResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyDocument">
+      <wsdl:input message="tns:VerifyDocumentRequest" wsaw:Action="ws.dvelop.com/VerifyDocument"></wsdl:input>
+      <wsdl:output message="tns:VerifyDocumentResponse" wsaw:Action="ws.dvelop.com/D3WS/VerifyeDocument"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAttributes">
+      <wsdl:input message="tns:ValidateAttributesRequest" wsaw:Action="ws.dvelop.com/ValidateAttributes"></wsdl:input>
+      <wsdl:output message="tns:ValidateAttributesResponse" wsaw:Action="ws.dvelop.com/D3WS/ValidateAttributesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSInfo">
+      <wsdl:input message="tns:WSInfoRequest" wsaw:Action="ws.dvelop.com/WSInfo"></wsdl:input>
+      <wsdl:output message="tns:WSInfoResponse" wsaw:Action="ws.dvelop.com/D3WService/WSInfoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalFileInformation">
+      <wsdl:input message="tns:GetPhysicalFileInformationRequest" wsaw:Action="ws.dvelop.com/GetPhysicalFileInformation"></wsdl:input>
+      <wsdl:output message="tns:GetPhysicalFileInformationResponse" wsaw:Action="ws.dvelop.com/D3WS/GetPhysicalFileInformation"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportDocument">
+      <wsdl:input message="tns:ImportDocumentRequest" wsaw:Action="ws.dvelop.com/ImportDocument"></wsdl:input>
+      <wsdl:output message="tns:ImportDocumentResponse" wsaw:Action="ws.dvelop.com/D3WS/ImportDocumentResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidValuesForAttribute">
+      <wsdl:input message="tns:GetValidValuesForAttributeRequest" wsaw:Action="ws.dvelop.com/GetValidValuesForAttribute"></wsdl:input>
+      <wsdl:output message="tns:GetValidValuesForAttributeResponse" wsaw:Action="ws.dvelop.com/D3WS/GetValidValuesForAttribute"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePasswordForUser">
+      <wsdl:input message="tns:ValidatePasswordForUser1Request" wsaw:Action="ws.dvelop.com/ValidatePasswordForUser"></wsdl:input>
+      <wsdl:output message="tns:ValidatePasswordForUser1Response" wsaw:Action="ws.dvelop.com/D3WS/ValidatePasswordForUserResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAttributes">
+      <wsdl:input message="tns:UpdateAttributesRequest" wsaw:Action="ws.dvelop.com/UpdateAttributes"></wsdl:input>
+      <wsdl:output message="tns:UpdateAttributesResponse" wsaw:Action="ws.dvelop.com/D3WS/UpdateAttributesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveNote">
+      <wsdl:input message="tns:ReceiveNoteRequest" wsaw:Action="ws.dvelop.com/ReceiveNote"></wsdl:input>
+      <wsdl:output message="tns:ReceiveNoteResponse" wsaw:Action="ws.dvelop.com/D3WS/ReceiveNoteResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDocument">
+      <wsdl:input message="tns:SearchDocumentRequest" wsaw:Action="ws.dvelop.com/SearchDocument"></wsdl:input>
+      <wsdl:output message="tns:SearchDocumentResponse" wsaw:Action="ws.dvelop.com/D3WS/SearchDocumentResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocument">
+      <wsdl:input message="tns:DeleteDocumentRequest" wsaw:Action="ws.dvelop.com/DeleteDocument"></wsdl:input>
+      <wsdl:output message="tns:DeleteDocumentResponse" wsaw:Action="ws.dvelop.com/D3WS/DeleteDocument"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInGroup">
+      <wsdl:input message="tns:GetUserInGroupRequest" wsaw:Action="ws.dvelop.com/GetUserInGroup"></wsdl:input>
+      <wsdl:output message="tns:GetUserInGroupResponse" wsaw:Action="ws.dvelop.com/D3WS/GetUserInGroup"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportNewVersionDocument">
+      <wsdl:input message="tns:ImportNewVersionDocumentRequest" wsaw:Action="ws.dvelop.com/ImportNewVersionDocument"></wsdl:input>
+      <wsdl:output message="tns:ImportNewVersionDocumentResponse" wsaw:Action="ws.dvelop.com/D3WS/ImportNewVersionDocumentResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSPing">
+      <wsdl:input message="tns:WSPingRequest" wsaw:Action="ws.dvelop.com/WSPing"></wsdl:input>
+      <wsdl:output message="tns:WSPingResponse" wsaw:Action="ws.dvelop.com/D3WService/WSPingResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStructureDocument">
+      <wsdl:input message="tns:GetStructureDocumentRequest" wsaw:Action="ws.dvelop.com/GetStructureDocument"></wsdl:input>
+      <wsdl:output message="tns:GetStructureDocumentResponse" wsaw:Action="ws.dvelop.com/D3WS/GetStructureDocumentResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferDocument">
+      <wsdl:input message="tns:TransferDocumentRequest" wsaw:Action="ws.dvelop.com/TransferDocument"></wsdl:input>
+      <wsdl:output message="tns:TransferDocumentResponse" wsaw:Action="ws.dvelop.com/D3WS/TransferDocument"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNote">
+      <wsdl:input message="tns:SendNoteRequest" wsaw:Action="ws.dvelop.com/SendNote"></wsdl:input>
+      <wsdl:output message="tns:SendNoteResponse" wsaw:Action="ws.dvelop.com/D3WS/SendNoteResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="D3WSbinding" type="tns:D3WServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ReleaseDocument">
+      <soap:operation soapAction="ws.dvelop.com/ReleaseDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleAttributes">
+      <soap:operation soapAction="ws.dvelop.com/GetMultipleAttributes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDocumentInIDList">
+      <soap:operation soapAction="ws.dvelop.com/SearchDocumentInIDList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyDocument">
+      <soap:operation soapAction="ws.dvelop.com/VerifyDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAttributes">
+      <soap:operation soapAction="ws.dvelop.com/ValidateAttributes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSInfo">
+      <soap:operation soapAction="ws.dvelop.com/WSInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalFileInformation">
+      <soap:operation soapAction="ws.dvelop.com/GetPhysicalFileInformation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportDocument">
+      <soap:operation soapAction="ws.dvelop.com/ImportDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidValuesForAttribute">
+      <soap:operation soapAction="ws.dvelop.com/GetValidValuesForAttribute" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePasswordForUser">
+      <soap:operation soapAction="ws.dvelop.com/ValidatePasswordForUser" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAttributes">
+      <soap:operation soapAction="ws.dvelop.com/UpdateAttributes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveNote">
+      <soap:operation soapAction="ws.dvelop.com/ReceiveNote" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDocument">
+      <soap:operation soapAction="ws.dvelop.com/SearchDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocument">
+      <soap:operation soapAction="ws.dvelop.com/DeleteDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInGroup">
+      <soap:operation soapAction="ws.dvelop.com/GetUserInGroup" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportNewVersionDocument">
+      <soap:operation soapAction="ws.dvelop.com/ImportNewVersionDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSPing">
+      <soap:operation soapAction="ws.dvelop.com/WSPing" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStructureDocument">
+      <soap:operation soapAction="ws.dvelop.com/GetStructureDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferDocument">
+      <soap:operation soapAction="ws.dvelop.com/TransferDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNote">
+      <soap:operation soapAction="ws.dvelop.com/SendNote" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="kn-DocumentManagementD3Proxy-TST-V1-VS">
+    <wsdl:port name="kn-DocumentManagementD3Proxy-TST-V1-VSsoaphttp" binding="tns:D3WSbinding">
+      <soap:address location="http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementProxy-TST-V1-VS?wsdl</con:endpoint></con:endpoints><con:operation id="dc8acbca-d763-4bf1-8e9f-e210eb506ca5" isOneWay="false" action="ws.dvelop.com/DeleteDocument" name="DeleteDocument" bindingOperationName="DeleteDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5632013b-5068-416f-be47-29fbaa6466ac" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:DeleteDocumentRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <!--Optional:-->\r
+            <doc_id>?</doc_id>\r
+            <!--Optional:-->\r
+            <reason>?</reason>\r
+         </import>\r
+      </ws:DeleteDocumentRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/DeleteDocument"/></con:call></con:operation><con:operation id="8ceeaa39-c96e-4177-bbec-de699d77e630" isOneWay="false" action="ws.dvelop.com/GetMultipleAttributes" name="GetMultipleAttributes" bindingOperationName="GetMultipleAttributes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fca6f1cd-8edd-43d1-8f48-2262c31e3e71" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetMultipleAttributesRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <!--Optional:-->\r
+            <doc_id>?</doc_id>\r
+         </import>\r
+      </ws:GetMultipleAttributesRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/GetMultipleAttributes"/></con:call></con:operation><con:operation id="19314703-00ba-41ae-adae-8e6638cb302f" isOneWay="false" action="ws.dvelop.com/GetPhysicalFileInformation" name="GetPhysicalFileInformation" bindingOperationName="GetPhysicalFileInformation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eebb23ab-ff2b-4e9b-a8ce-eb83fd59c406" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetPhysicalFileInformationRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <!--Optional:-->\r
+            <doc_id>?</doc_id>\r
+         </import>\r
+         <!--Optional:-->\r
+         <WSDownloadFormat>\r
+            <!--Optional:-->\r
+            <encoded>?</encoded>\r
+            <!--Optional:-->\r
+            <outputFormat>?</outputFormat>\r
+         </WSDownloadFormat>\r
+      </ws:GetPhysicalFileInformationRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/GetPhysicalFileInformation"/></con:call></con:operation><con:operation id="fd816a2d-1d49-44a5-8a2b-d41f7e92a358" isOneWay="false" action="ws.dvelop.com/GetStructureDocument" name="GetStructureDocument" bindingOperationName="GetStructureDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="68149132-21af-4d24-9842-ba9464ff4196" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetStructureDocumentRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <!--Optional:-->\r
+            <doc_id>?</doc_id>\r
+            <!--Optional:-->\r
+            <direction>?</direction>\r
+         </import>\r
+      </ws:GetStructureDocumentRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/GetStructureDocument"/></con:call></con:operation><con:operation id="5114d946-320d-4b61-aa01-e46d4258e719" isOneWay="false" action="ws.dvelop.com/GetUserInGroup" name="GetUserInGroup" bindingOperationName="GetUserInGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="45c96afc-0f19-42f0-8fc4-aa6efee8a37a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetUserInGroupRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <user>?</user>\r
+         </import>\r
+      </ws:GetUserInGroupRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/GetUserInGroup"/></con:call></con:operation><con:operation id="3e9b29ea-8e97-4d52-905e-e49e99846f75" isOneWay="false" action="ws.dvelop.com/GetValidValuesForAttribute" name="GetValidValuesForAttribute" bindingOperationName="GetValidValuesForAttribute" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="09bb1d5d-89a4-4b46-969b-5e563ce6bb82" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetValidValuesForAttributeRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <document_type_short>?</document_type_short>\r
+            <!--Optional:-->\r
+            <field_number>?</field_number>\r
+            <!--Optional:-->\r
+            <row_number>?</row_number>\r
+            <!--Optional:-->\r
+            <max_number_of_docs>?</max_number_of_docs>\r
+            <!--Optional:-->\r
+            <doc_number>?</doc_number>\r
+            <!--Optional:-->\r
+            <doc_type_short>?</doc_type_short>\r
+            <!--Optional:-->\r
+            <var_number>?</var_number>\r
+            <!--Optional:-->\r
+            <doc_id>?</doc_id>\r
+            <!--Optional:-->\r
+            <doc_status>?</doc_status>\r
+            <!--Optional:-->\r
+            <user>?</user>\r
+            <!--Optional:-->\r
+            <date1>?</date1>\r
+            <!--Optional:-->\r
+            <date2>?</date2>\r
+            <!--Optional:-->\r
+            <search_modified_tstamp_1>?</search_modified_tstamp_1>\r
+            <!--Optional:-->\r
+            <search_modified_tstamp_2>?</search_modified_tstamp_2>\r
+            <!--Optional:-->\r
+            <web_published>?</web_published>\r
+            <!--Optional:-->\r
+            <owner>?</owner>\r
+            <!--Optional:-->\r
+            <doc_extension>?</doc_extension>\r
+            <!--Optional:-->\r
+            <searchtext_expression>?</searchtext_expression>\r
+            <!--Optional:-->\r
+            <dsearch_similar_doc_id>?</dsearch_similar_doc_id>\r
+            <!--Optional:-->\r
+            <dsearch_min_relevance>?</dsearch_min_relevance>\r
+            <!--Optional:-->\r
+            <dsearch_want_hints>?</dsearch_want_hints>\r
+            <!--Optional:-->\r
+            <dsearch_by_example>?</dsearch_by_example>\r
+            <!--Optional:-->\r
+            <codepage>?</codepage>\r
+            <!--Optional:-->\r
+            <doc_fields>\r
+               <!--Zero or more repetitions:-->\r
+               <doc_field field_no="?" row_no="?" value="?"/>\r
+            </doc_fields>\r
+         </import>\r
+      </ws:GetValidValuesForAttributeRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/GetValidValuesForAttribute"/></con:call></con:operation><con:operation id="9af49d1d-c891-47c1-bf86-f2f85894a320" isOneWay="false" action="ws.dvelop.com/ImportDocument" name="ImportDocument" bindingOperationName="ImportDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4b9128f4-e4e6-418e-937c-dabd2f4cda84" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:ImportDocumentRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <!--Optional:-->\r
+            <temporary_filename>?</temporary_filename>\r
+            <!--Optional:-->\r
+            <doc_number>?</doc_number>\r
+            <!--Optional:-->\r
+            <doc_type_long>?</doc_type_long>\r
+            <!--Optional:-->\r
+            <doc_type_short>?</doc_type_short>\r
+            <!--Optional:-->\r
+            <var_number>?</var_number>\r
+            <doc_status>?</doc_status>\r
+            <!--Optional:-->\r
+            <user>?</user>\r
+            <!--Optional:-->\r
+            <doc_fields>\r
+               <!--Zero or more repetitions:-->\r
+               <doc_field field_no="?" row_no="?" value="?"/>\r
+            </doc_fields>\r
+            <!--Optional:-->\r
+            <doc_filename>?</doc_filename>\r
+            <!--Optional:-->\r
+            <doc_extension>?</doc_extension>\r
+            <!--Optional:-->\r
+            <doc_directory>?</doc_directory>\r
+            <!--Optional:-->\r
+            <doc_text_1>?</doc_text_1>\r
+            <!--Optional:-->\r
+            <doc_text_2>?</doc_text_2>\r
+            <!--Optional:-->\r
+            <doc_text_3>?</doc_text_3>\r
+            <!--Optional:-->\r
+            <doc_text_4>?</doc_text_4>\r
+            <!--Optional:-->\r
+            <transfer_synchron>?</transfer_synchron>\r
+            <!--Optional:-->\r
+            <holdfile_user>?</holdfile_user>\r
+            <!--Optional:-->\r
+            <holdfile_date>?</holdfile_date>\r
+            <!--Optional:-->\r
+            <holdfile_notice>?</holdfile_notice>\r
+            <!--Optional:-->\r
+            <holdfile_date_remember>?</holdfile_date_remember>\r
+            <!--Optional:-->\r
+            <holdfile_date_acknowledge_until>?</holdfile_date_acknowledge_until>\r
+            <!--Optional:-->\r
+            <book_attribute>?</book_attribute>\r
+            <!--Optional:-->\r
+            <reserved_doc_id_header>?</reserved_doc_id_header>\r
+            <!--Optional:-->\r
+            <reserved_doc_id_suffix>?</reserved_doc_id_suffix>\r
+            <!--Optional:-->\r
+            <reject_duplicates>?</reject_duplicates>\r
+            <!--Optional:-->\r
+            <import_hash>?</import_hash>\r
+            <!--Optional:-->\r
+            <asynchronous>?</asynchronous>\r
+            <!--Optional:-->\r
+            <batch_alteration_number>?</batch_alteration_number>\r
+         </import>\r
+         <bytes>cid:856815679534</bytes>\r
+      </ws:ImportDocumentRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/ImportDocument"/></con:call></con:operation><con:operation id="cbd0fd66-349f-450d-a5b2-56359098a26c" isOneWay="false" action="ws.dvelop.com/ImportNewVersionDocument" name="ImportNewVersionDocument" bindingOperationName="ImportNewVersionDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e208349e-0e88-4f21-9c4f-8e823d7ec6b7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:ImportNewVersionDocumentRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <doc_id>?</doc_id>\r
+            <!--Optional:-->\r
+            <attribute_overwrite>?</attribute_overwrite>\r
+            <!--Optional:-->\r
+            <temporary_filename>?</temporary_filename>\r
+            <!--Optional:-->\r
+            <doc_number>?</doc_number>\r
+            <!--Optional:-->\r
+            <doc_type_long>?</doc_type_long>\r
+            <!--Optional:-->\r
+            <doc_type_short>?</doc_type_short>\r
+            <!--Optional:-->\r
+            <var_number>?</var_number>\r
+            <doc_status>?</doc_status>\r
+            <!--Optional:-->\r
+            <user>?</user>\r
+            <!--Optional:-->\r
+            <doc_fields>\r
+               <!--Zero or more repetitions:-->\r
+               <doc_field field_no="?" row_no="?" value="?"/>\r
+            </doc_fields>\r
+            <!--Optional:-->\r
+            <doc_filename>?</doc_filename>\r
+            <!--Optional:-->\r
+            <doc_extension>?</doc_extension>\r
+            <!--Optional:-->\r
+            <doc_directory>?</doc_directory>\r
+            <!--Optional:-->\r
+            <doc_text_1>?</doc_text_1>\r
+            <!--Optional:-->\r
+            <doc_text_2>?</doc_text_2>\r
+            <!--Optional:-->\r
+            <doc_text_3>?</doc_text_3>\r
+            <!--Optional:-->\r
+            <doc_text_4>?</doc_text_4>\r
+            <!--Optional:-->\r
+            <transfer_synchron>?</transfer_synchron>\r
+            <!--Optional:-->\r
+            <holdfile_user>?</holdfile_user>\r
+            <!--Optional:-->\r
+            <holdfile_date>?</holdfile_date>\r
+            <!--Optional:-->\r
+            <holdfile_notice>?</holdfile_notice>\r
+         </import>\r
+         <bytes>cid:1176724933131</bytes>\r
+      </ws:ImportNewVersionDocumentRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/ImportNewVersionDocument"/></con:call></con:operation><con:operation id="20ea6dd6-2506-498a-98bf-35d7d6a579cf" isOneWay="false" action="ws.dvelop.com/ReceiveNote" name="ReceiveNote" bindingOperationName="ReceiveNote" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a5a4ba0f-5826-41d8-91e5-f8dfee44dc68" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:ReceiveNoteRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <doc_id>?</doc_id>\r
+         </import>\r
+      </ws:ReceiveNoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/ReceiveNote"/></con:call></con:operation><con:operation id="1d2c3f1f-a3c1-4ae5-85e0-a018f83106b7" isOneWay="false" action="ws.dvelop.com/ReleaseDocument" name="ReleaseDocument" bindingOperationName="ReleaseDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9eb26023-f6c3-44fb-b1db-a6254045bbdf" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:ReleaseDocumentRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <!--Optional:-->\r
+            <doc_id>?</doc_id>\r
+            <!--Optional:-->\r
+            <asynchronous>?</asynchronous>\r
+            <!--Optional:-->\r
+            <unblock>?</unblock>\r
+         </import>\r
+      </ws:ReleaseDocumentRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/ReleaseDocument"/></con:call></con:operation><con:operation id="bfbdc0ce-44b7-4eb5-8b94-3948cdd6a955" isOneWay="false" action="ws.dvelop.com/SearchDocument" name="SearchDocument" bindingOperationName="SearchDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fb3c0416-e8de-4901-9669-14022d16531f" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SearchDocumentRequest debug="false" MTOM="false">
+         <archiv>
+            <User>doccheck</User>
+            <Password>changeme</Password>
+            <Language>001</Language>
+            <arch>8</arch>
+         </archiv>
+         <import>
+            <max_number_of_docs>50</max_number_of_docs>
+            <!--doc_number>?</doc_number-->
+            <!--doc_type_short>KNEFI</doc_type_short-->
+            <!--doc_id>QT00237824</doc_id>
+            <!--doc_status>A</doc_status-->
+            <doc_fields>
+            	<doc_field field_no="37" row_no="0" value="6b72eacd5a7540b59b105c6d09006612"/>
+            </doc_fields>
+         </import>
+         <WSDownloadFormat>
+            <outputFormat>1</outputFormat>
+         </WSDownloadFormat>
+      </ws:SearchDocumentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/SearchDocument"/><con:wsrmConfig version="1.2"/></con:call><con:call id="8f960d2b-9211-4e34-bb6c-6746c835daa0" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SearchDocumentRequest debug="false" MTOM="false">
+         <archiv>
+            <User>doccheck</User>
+            <Password>changeme</Password>
+            <Language>001</Language>
+            <arch>8</arch>
+         </archiv>
+         <import>
+            <max_number_of_docs>10</max_number_of_docs>
+            <doc_type_short>KNEFI</doc_type_short>
+            <doc_fields>
+             <doc_field field_no="37" row_no="0" value="b63644a8363d4c8ea05d10b0646e560e"/>
+            </doc_fields>
+         </import>
+         <WSDownloadFormat>
+            <outputFormat>1</outputFormat>
+         </WSDownloadFormat>
+      </ws:SearchDocumentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/SearchDocument"/><con:wsrmConfig version="1.2"/></con:call><con:call id="74313694-fc74-4efa-8513-430ad675a205" name="Request 3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SearchDocumentRequest debug="false" MTOM="false">
+         <archiv>
+            <User>doccheck</User>
+            <Password>changeme</Password>
+            <Language>001</Language>
+            <arch>1</arch>
+         </archiv>
+         <import>
+            <max_number_of_docs>1</max_number_of_docs>
+            <doc_type_short>KNEFI</doc_type_short>
+            <doc_fields>
+             <doc_field field_no="37" row_no="0" value="7a4a9e2827f44fffba2fae2f4a88129a"/>
+            </doc_fields>
+         </import>
+         <WSDownloadFormat>
+            <outputFormat>1</outputFormat>
+         </WSDownloadFormat>
+      </ws:SearchDocumentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/SearchDocument"/><con:wsrmConfig version="1.2"/></con:call><con:call id="9be6c9a9-7c92-4ba1-a51f-9aa855010f06" name="blank"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SearchDocumentRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <!--Optional:-->\r
+            <max_number_of_docs>?</max_number_of_docs>\r
+            <!--Optional:-->\r
+            <doc_number>?</doc_number>\r
+            <!--Optional:-->\r
+            <doc_type_short>?</doc_type_short>\r
+            <!--Optional:-->\r
+            <var_number>?</var_number>\r
+            <!--Optional:-->\r
+            <doc_id>?</doc_id>\r
+            <!--Optional:-->\r
+            <doc_status>?</doc_status>\r
+            <!--Optional:-->\r
+            <user>?</user>\r
+            <!--Optional:-->\r
+            <date1>?</date1>\r
+            <!--Optional:-->\r
+            <date2>?</date2>\r
+            <!--Optional:-->\r
+            <search_modified_tstamp_1>?</search_modified_tstamp_1>\r
+            <!--Optional:-->\r
+            <search_modified_tstamp_2>?</search_modified_tstamp_2>\r
+            <!--Optional:-->\r
+            <web_published>?</web_published>\r
+            <!--Optional:-->\r
+            <owner>?</owner>\r
+            <!--Optional:-->\r
+            <doc_extension>?</doc_extension>\r
+            <!--Optional:-->\r
+            <text>?</text>\r
+            <!--Optional:-->\r
+            <searchtext_expression>?</searchtext_expression>\r
+            <!--Optional:-->\r
+            <doc_fields>\r
+               <!--Zero or more repetitions:-->\r
+               <doc_field field_no="?" row_no="?" value="?"/>\r
+            </doc_fields>\r
+         </import>\r
+         <!--Optional:-->\r
+         <WSDownloadFormat>\r
+            <!--Optional:-->\r
+            <encoded>?</encoded>\r
+            <!--Optional:-->\r
+            <outputFormat>?</outputFormat>\r
+         </WSDownloadFormat>\r
+      </ws:SearchDocumentRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/SearchDocument"/><con:wsrmConfig version="1.2"/></con:call><con:call id="fcefb3ba-0480-46c0-81fb-53d413ca6be3" name="byTrackingNumber"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SearchDocumentRequest debug="false" MTOM="false">
+         <archiv>
+            <User>doccheck</User>
+            <Password>changeme</Password>
+            <Language>001</Language>
+            <arch>8</arch>
+         </archiv>
+         <import>
+            <max_number_of_docs>100</max_number_of_docs>
+            <doc_fields>
+            	<!--doc_field field_no="5" row_no="-1" value="C02"/-->
+               <!--doc_field field_no="6" row_no="0" value="PRUE980000058"/-->
+               <!--doc_field field_no="6" row_no="1" value="PRUE980250092"/-->
+            	<doc_field field_no="7" row_no="0" value="3250943732"/>
+
+			<!-- CIEL EJ -->
+               <!--doc_field field_no="5" row_no="-1" value="C02"/-->
+			<!--oc_field field_no="1" row_no="0" value="7510-0438-804.011"/-->
+            	
+            </doc_fields>
+         </import>
+         <WSDownloadFormat>
+            <outputFormat>1</outputFormat>
+         </WSDownloadFormat>
+      </ws:SearchDocumentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/SearchDocument"/><con:wsrmConfig version="1.2"/></con:call><con:call id="41f1b1dc-e6bc-4a49-9a2c-c5af3ffc4f8c" name="byDocumentID"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementProxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SearchDocumentRequest debug="false" MTOM="false">
+         <archiv>
+            <User>doccheck</User>
+            <Password>changeme</Password>
+            <Language>001</Language>
+            <arch>8</arch>
+         </archiv>
+         <import>
+            <max_number_of_docs>100</max_number_of_docs>
+            <doc_fields>
+            
+            	<!--doc_field field_no="5" row_no="-1" value="I02"/-->
+            	<doc_field field_no="37" row_no="0" value="6e959881cbdd4a2a958110c00c256724"/>
+               <!--doc_field field_no="6" row_no="0" value="PRUE980000058"/-->
+
+            </doc_fields>
+         </import>
+         <WSDownloadFormat>
+            <outputFormat>1</outputFormat>
+         </WSDownloadFormat>
+      </ws:SearchDocumentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/SearchDocument"/><con:wsrmConfig version="1.2"/></con:call><con:call id="620b66e9-68b2-463c-8cae-f33e69f015b7" name="byDocumentNumber"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SearchDocumentRequest debug="false" MTOM="false">
+         <archiv>
+            <User>doccheck</User>
+            <Password>changeme</Password>
+            <Language>001</Language>
+            <!--PROD: 1, TEST: 8-->
+            <arch>8</arch>
+         </archiv>
+         <import>
+            <max_number_of_docs>100</max_number_of_docs>
+            <doc_type_short>KNEFI</doc_type_short>
+            <doc_fields>
+            
+            	<!--doc_field field_no="37" row_no="0" value="3af0a33cb41d4da2be645731d948a375"/-->
+               <doc_field field_no="6" row_no="0" value="SETT83"/>
+               <!--doc_field field_no="7" row_no="0" value="3250958246"/-->
+               
+            </doc_fields>
+         </import>
+         <WSDownloadFormat>
+            <outputFormat>1</outputFormat>
+         </WSDownloadFormat>
+      </ws:SearchDocumentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/SearchDocument"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="983576bc-35e6-4048-a546-a6f20e19b1a7" isOneWay="false" action="ws.dvelop.com/SearchDocumentInIDList" name="SearchDocumentInIDList" bindingOperationName="SearchDocumentInIDList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5e258088-08a1-4461-860a-f79ead4185d2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SearchDocumentInIDListRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <table>\r
+            <!--1 or more repetitions:-->\r
+            <item>\r
+               <doc_id>?</doc_id>\r
+            </item>\r
+         </table>\r
+         <!--Optional:-->\r
+         <WSDownloadFormat>\r
+            <!--Optional:-->\r
+            <encoded>?</encoded>\r
+            <!--Optional:-->\r
+            <outputFormat>?</outputFormat>\r
+         </WSDownloadFormat>\r
+      </ws:SearchDocumentInIDListRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/SearchDocumentInIDList"/></con:call></con:operation><con:operation id="c307b6a6-7bb7-429f-aed8-e0f2d52caeb0" isOneWay="false" action="ws.dvelop.com/SendNote" name="SendNote" bindingOperationName="SendNote" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ad4ac44e-d71c-489a-91a7-4919569dcb70" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SendNoteRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <doc_id>?</doc_id>\r
+         </import>\r
+         <bytes>cid:254530661449</bytes>\r
+      </ws:SendNoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/SendNote"/></con:call></con:operation><con:operation id="93457036-0731-420f-a107-497acf2eb75f" isOneWay="false" action="ws.dvelop.com/TransferDocument" name="TransferDocument" bindingOperationName="TransferDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a36e32b8-fd20-431f-8b88-b04303e13571" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:TransferDocumentRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <!--Optional:-->\r
+            <doc_id>?</doc_id>\r
+            <!--Optional:-->\r
+            <source_status>?</source_status>\r
+            <!--Optional:-->\r
+            <destination_status>?</destination_status>\r
+            <!--Optional:-->\r
+            <destination_user_group>?</destination_user_group>\r
+            <!--Optional:-->\r
+            <asynchronous>?</asynchronous>\r
+            <!--Optional:-->\r
+            <alteration_text>?</alteration_text>\r
+            <!--Optional:-->\r
+            <archive_index>?</archive_index>\r
+         </import>\r
+      </ws:TransferDocumentRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/TransferDocument"/></con:call></con:operation><con:operation id="f9ef2efa-e3ec-4752-9d3d-6e239aae60e7" isOneWay="false" action="ws.dvelop.com/UpdateAttributes" name="UpdateAttributes" bindingOperationName="UpdateAttributes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3e9527f5-60bd-4ac4-b0b8-41579422fbce" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:UpdateAttributesRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <doc_id>?</doc_id>\r
+            <!--Optional:-->\r
+            <doc_type_short>?</doc_type_short>\r
+            <!--Optional:-->\r
+            <doc_text_1>?</doc_text_1>\r
+            <!--Optional:-->\r
+            <doc_text_2>?</doc_text_2>\r
+            <!--Optional:-->\r
+            <doc_text_3>?</doc_text_3>\r
+            <!--Optional:-->\r
+            <doc_text_4>?</doc_text_4>\r
+            <!--Optional:-->\r
+            <doc_fields>\r
+               <!--Zero or more repetitions:-->\r
+               <doc_field field_no="?" row_no="?" value="?"/>\r
+            </doc_fields>\r
+         </import>\r
+      </ws:UpdateAttributesRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/UpdateAttributes"/></con:call></con:operation><con:operation id="0964e04d-7ca9-4df6-abc3-947223ad8cd2" isOneWay="false" action="ws.dvelop.com/ValidateAttributes" name="ValidateAttributes" bindingOperationName="ValidateAttributes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5b8cb1a4-a860-4e17-89f5-1b7467954aa6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:ValidateAttributesRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <!--Optional:-->\r
+            <function>?</function>\r
+            <!--Optional:-->\r
+            <nextcall>?</nextcall>\r
+            <!--Optional:-->\r
+            <max_number_of_docs>?</max_number_of_docs>\r
+            <!--Optional:-->\r
+            <doc_number>?</doc_number>\r
+            <!--Optional:-->\r
+            <doc_type_short>?</doc_type_short>\r
+            <!--Optional:-->\r
+            <doc_type_long>?</doc_type_long>\r
+            <!--Optional:-->\r
+            <temporary_filename>?</temporary_filename>\r
+            <!--Optional:-->\r
+            <doc_filename>?</doc_filename>\r
+            <!--Optional:-->\r
+            <doc_directory>?</doc_directory>\r
+            <!--Optional:-->\r
+            <var_number>?</var_number>\r
+            <!--Optional:-->\r
+            <doc_id>?</doc_id>\r
+            <!--Optional:-->\r
+            <doc_status>?</doc_status>\r
+            <!--Optional:-->\r
+            <user>?</user>\r
+            <!--Optional:-->\r
+            <date1>?</date1>\r
+            <!--Optional:-->\r
+            <date2>?</date2>\r
+            <!--Optional:-->\r
+            <search_modified_tstamp_1>?</search_modified_tstamp_1>\r
+            <!--Optional:-->\r
+            <search_modified_tstamp_2>?</search_modified_tstamp_2>\r
+            <!--Optional:-->\r
+            <web_published>?</web_published>\r
+            <!--Optional:-->\r
+            <owner>?</owner>\r
+            <!--Optional:-->\r
+            <doc_extension>?</doc_extension>\r
+            <!--Optional:-->\r
+            <text>?</text>\r
+            <!--Optional:-->\r
+            <searchtext_expression>?</searchtext_expression>\r
+            <!--Optional:-->\r
+            <doc_fields>\r
+               <!--Zero or more repetitions:-->\r
+               <doc_field field_no="?" row_no="?" value="?"/>\r
+            </doc_fields>\r
+         </import>\r
+      </ws:ValidateAttributesRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/ValidateAttributes"/></con:call></con:operation><con:operation id="ea781379-ed15-41f3-9382-da81b63f5dcd" isOneWay="false" action="ws.dvelop.com/ValidatePasswordForUser" name="ValidatePasswordForUser" bindingOperationName="ValidatePasswordForUser" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="35b8c382-d781-4e10-8f7b-bd636b4507b1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:ValidatePasswordForUserRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <!--Optional:-->\r
+         <import>\r
+            <user>?</user>\r
+            <password>?</password>\r
+            <!--Optional:-->\r
+            <package>?</package>\r
+         </import>\r
+      </ws:ValidatePasswordForUserRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/ValidatePasswordForUser"/></con:call></con:operation><con:operation id="3199398e-2252-4819-88de-610052462190" isOneWay="false" action="ws.dvelop.com/VerifyDocument" name="VerifyDocument" bindingOperationName="VerifyDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7b288efc-389d-435e-ac25-d0e3c18b97b5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:VerifyDocumentRequest debug="?" MTOM="?">\r
+         <archiv>\r
+            <!--Optional:-->\r
+            <IpAddr>?</IpAddr>\r
+            <!--Optional:-->\r
+            <Port>?</Port>\r
+            <!--Optional:-->\r
+            <Server>?</Server>\r
+            <!--Optional:-->\r
+            <User>?</User>\r
+            <!--Optional:-->\r
+            <Password>?</Password>\r
+            <!--Optional:-->\r
+            <Language>?</Language>\r
+            <!--Optional:-->\r
+            <arch>?</arch>\r
+         </archiv>\r
+         <import>\r
+            <doc_id>?</doc_id>\r
+            <!--Optional:-->\r
+            <release_included>?</release_included>\r
+         </import>\r
+      </ws:VerifyDocumentRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/VerifyDocument"/></con:call></con:operation><con:operation id="afd99bca-1de5-4871-b609-ffb515618b8d" isOneWay="false" action="ws.dvelop.com/WSInfo" name="WSInfo" bindingOperationName="WSInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2eac82fa-1e66-4b5d-935f-2f7dad93d873" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:WSInfoRequest>\r
+         <!--Optional:-->\r
+         <params>?</params>\r
+      </ws:WSInfoRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/WSInfo"/></con:call></con:operation><con:operation id="b85728b7-848d-4b55-9838-9a068b941a53" isOneWay="false" action="ws.dvelop.com/WSPing" name="WSPing" bindingOperationName="WSPing" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="82504c70-2b7e-435d-871a-cabdadb44c11" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esb-test.int.kn:8888/ws/kn-DocumentManagementD3Proxy-TST-V1-VS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="ws.dvelop.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:WSPingRequest>\r
+         <!--Optional:-->\r
+         <string>?</string>\r
+         <!--Optional:-->\r
+         <base64Binary>cid:1451674814652</base64Binary>\r
+         <!--Optional:-->\r
+         <int>?</int>\r
+         <!--Optional:-->\r
+         <time>?</time>\r
+      </ws:WSPingRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ws.dvelop.com/WSPing"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

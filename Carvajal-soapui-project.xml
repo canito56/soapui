@@ -1,0 +1,1479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="cff5a808-2dc2-4bf0-a1be-7fb7f4316d62" activeEnvironment="Default" name="Carvajal" resourceRoot="${projectDir}" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="8bdbd149-4d0b-4ed6-9821-9cce3fc970f0" wsaVersion="NONE" name="InvoiceServiceImplServiceSoapBinding" type="wsdl" bindingName="{http://server.cloud.service.web.invoice.carvajal.com/}InvoiceServiceImplServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://cenfinancierolab.cen.biz/isows/InvoiceService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://cenfinancierolab.cen.biz/isows/InvoiceService?wsdl"><con:part><con:url>https://cenfinancierolab.cen.biz/isows/InvoiceService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="InvoiceServiceImplService" targetNamespace="http://server.cloud.service.web.invoice.carvajal.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://server.cloud.service.web.invoice.carvajal.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://invoice.carvajal.com/invoiceService/">
+  <wsdl:import location="https://cenfinancierolab.cen.biz/isows/InvoiceService?wsdl=invoiceService.wsdl" namespace="http://invoice.carvajal.com/invoiceService/"></wsdl:import>
+  <wsdl:binding name="InvoiceServiceImplServiceSoapBinding" type="ns1:invoiceService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ValidateSentFiles">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/ValidateSentFiles" style="document"/>
+      <wsdl:input name="ValidateSentFiles">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ValidateSentFilesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentStatusByNumber">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/DocumentStatusByNumber" style="document"/>
+      <wsdl:input name="DocumentStatusByNumber">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DocumentStatusByNumberResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadSync">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/UploadSync" style="document"/>
+      <wsdl:input name="UploadSync">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadSyncResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadLogFiles">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/UploadLogFiles" style="document"/>
+      <wsdl:input name="UploadLogFiles">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadLogFilesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Upload">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/Upload" style="document"/>
+      <wsdl:input name="Upload">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadResolution">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/UploadResolution" style="document"/>
+      <wsdl:input name="UploadResolution">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadResolutionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadCompany">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/UploadCompany" style="document"/>
+      <wsdl:input name="UploadCompany">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadCompanyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadReceiver">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/DownloadReceiver" style="document"/>
+      <wsdl:input name="DownloadReceiver">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DownloadReceiverResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentStatus">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/DocumentStatus" style="document"/>
+      <wsdl:input name="DocumentStatus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DocumentStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAppMobile">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/UpdateAppMobile" style="document"/>
+      <wsdl:input name="UpdateAppMobile">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UpdateAppMobileResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAvaliableDocuments">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/CheckAvaliableDocuments" style="document"/>
+      <wsdl:input name="CheckAvaliableDocuments">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CheckAvaliableDocumentsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadAvaliableDocuments">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/DownloadAvaliableDocuments" style="document"/>
+      <wsdl:input name="DownloadAvaliableDocuments">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DownloadAvaliableDocumentsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Download">
+      <soap:operation soapAction="http://invoice.carvajal.com/invoiceService/Download" style="document"/>
+      <wsdl:input name="Download">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DownloadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvoiceServiceFaultException">
+        <soap:fault name="InvoiceServiceFaultException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InvoiceServiceImplService">
+    <wsdl:port binding="tns:InvoiceServiceImplServiceSoapBinding" name="InvoiceServiceImplPort">
+      <soap:address location="https://cenfinancierolab.cen.biz/isows/InvoiceService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://cenfinancierolab.cen.biz/isows/InvoiceService?wsdl=invoiceService.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="invoiceService" targetNamespace="http://invoice.carvajal.com/invoiceService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://invoice.carvajal.com/invoiceService/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://invoice.carvajal.com/invoiceService/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://invoice.carvajal.com/invoiceService/">
+      <xs:element name="AcceptanceRejection">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ReceiverId" type="xs:string"/>
+            <xs:element minOccurs="0" name="CountryCode" type="xs:string"/>
+            <xs:element name="Documents">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="Document">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="InvoiceNumber" type="xs:string"/>
+                        <xs:element name="InvoiceType" type="xs:string"/>
+                        <xs:element name="SenderId" type="xs:string"/>
+                        <xs:element name="UseStateCode" type="xs:string"/>
+                        <xs:element minOccurs="0" name="Reason" type="xs:string"/>
+                        <xs:element minOccurs="0" name="UseStateDate" type="xs:dateTime"/>
+                        <xs:element minOccurs="0" name="User" type="xs:string"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckAvaliableDocumentsRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="companyId" type="xs:string"/>
+            <xs:element name="initialDate" type="xs:dateTime"/>
+            <xs:element name="finalDate" type="xs:dateTime"/>
+            <xs:element name="resourceType" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckAvaliableDocumentsResponse" type="tns:checkAvaliableDocumentsResponse"/>
+      <xs:element name="DocumentStatusByNumberRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="companyId" type="xs:string"/>
+            <xs:element name="accountId" type="xs:string"/>
+            <xs:element name="documentType" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentPrefix" type="xs:string"/>
+            <xs:element name="documentNumber" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DocumentStatusRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="companyId" type="xs:string"/>
+            <xs:element name="accountId" type="xs:string"/>
+            <xs:element name="transactionId" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DocumentStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="processName" type="xs:string"/>
+            <xs:element name="processStatus" type="xs:string"/>
+            <xs:element minOccurs="0" name="processDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="messageType" type="xs:string"/>
+            <xs:element minOccurs="0" name="errorMessage" type="xs:string"/>
+            <xs:element minOccurs="0" name="legalStatus" type="xs:string"/>
+            <xs:element minOccurs="0" name="governmentResponseCode" type="xs:string"/>
+            <xs:element minOccurs="0" name="governmentResponseDescription" type="xs:string"/>
+            <xs:element minOccurs="0" name="governmentObservations" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DownloadAvaliableDocumentsRequest" type="tns:downloadAvaliableDocumentsRequest"/>
+      <xs:element name="DownloadAvaliableDocumentsResponse" type="tns:downloadAvaliableDocumentsResponse"/>
+      <xs:element name="DownloadReceiverRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="companyId" type="xs:string"/>
+            <xs:element name="documentType" type="xs:string"/>
+            <xs:element name="documentNumber" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentPrefix" type="xs:string"/>
+            <xs:element name="resourceType" type="xs:string"/>
+            <xs:element name="companyReceiverId" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DownloadReceiverResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="status" type="xs:string"/>
+            <xs:element name="downloadData" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DownloadRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="companyId" type="xs:string"/>
+            <xs:element name="accountId" type="xs:string"/>
+            <xs:element name="documentType" type="xs:string"/>
+            <xs:element name="documentNumber" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentPrefix" type="xs:string"/>
+            <xs:element name="resourceType" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DownloadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="status" type="xs:string"/>
+            <xs:element name="downloadData" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InvoiceServiceFault" nillable="true" type="xs:anyType"/>
+      <xs:element name="ReceivedDocumentRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="documentNumber" type="xs:string"/>
+            <xs:element name="documentType" type="xs:string"/>
+            <xs:element name="hash" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReceivedDocumentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+            <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentType" type="xs:string"/>
+            <xs:element name="status" type="xs:boolean"/>
+            <xs:element minOccurs="0" name="message" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReceivedDocumentsRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="companyId" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" name="receivedDocuments">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="documentNumber" type="xs:string"/>
+                  <xs:element name="documentType" type="xs:string"/>
+                  <xs:element name="hash" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReceivedDocumentsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="receivedDocuments" nillable="true">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+                  <xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+                  <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+                  <xs:element minOccurs="0" name="documentType" type="xs:string"/>
+                  <xs:element name="status" type="xs:boolean"/>
+                  <xs:element minOccurs="0" name="message" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateAppMobileRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="companyId" type="xs:string"/>
+            <xs:element name="operativeSystemName" type="xs:string"/>
+            <xs:element name="operativeSystemVersion" type="xs:string"/>
+            <xs:element name="appVersion" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateAppMobileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="status" type="xs:string"/>
+            <xs:element name="updateData" type="xs:string"/>
+            <xs:element name="appVersion" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadCompanyRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="company" type="tns:company"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadCompanyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="status" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadLogFileRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="logFileName" type="xs:string"/>
+            <xs:element name="logContent" type="xs:base64Binary"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadLogFileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="logFileName" type="xs:string"/>
+            <xs:element name="status" type="xs:boolean"/>
+            <xs:element minOccurs="0" name="message" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadLogFilesRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="companyId" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" name="uploadLogFiles">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="logFileName" type="xs:string"/>
+                  <xs:element name="logContent" type="xs:base64Binary"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadLogFilesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="uploadLogFileResponses">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="logFileName" type="xs:string"/>
+                  <xs:element name="status" type="xs:boolean"/>
+                  <xs:element minOccurs="0" name="message" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="fileName" type="xs:string"/>
+            <xs:element name="fileData" type="xs:string"/>
+            <xs:element name="companyId" type="xs:string"/>
+            <xs:element name="accountId" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadResolutionRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resolution" type="tns:resolution"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadResolutionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="status" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="status" type="xs:string"/>
+            <xs:element name="transactionId" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadSyncRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="fileName" type="xs:string"/>
+            <xs:element name="fileData" type="xs:base64Binary"/>
+            <xs:element name="companyId" type="xs:string"/>
+            <xs:element name="accountId" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadSyncResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="status" type="xs:string"/>
+            <xs:element name="transactionId" type="xs:string"/>
+            <xs:element name="downloadData" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="resolution">
+        <xs:sequence>
+          <xs:element name="documentType" type="xs:string"/>
+          <xs:element name="resolutionNumber" type="xs:string"/>
+          <xs:element name="companyId" type="xs:string"/>
+          <xs:element name="description" type="xs:string"/>
+          <xs:element name="isEnable" type="xs:string"/>
+          <xs:element name="initialDateValidity" type="xs:string"/>
+          <xs:element name="finalDateValidity" type="xs:string"/>
+          <xs:element name="initialNumber" type="xs:string"/>
+          <xs:element name="finalNumber" type="xs:string"/>
+          <xs:element name="invoicingTechnicalKey" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" name="prefix" type="tns:prefix"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="prefix">
+        <xs:sequence>
+          <xs:element name="prefix" type="xs:string"/>
+          <xs:element name="oldPrefix" type="xs:string"/>
+          <xs:element name="description" type="xs:string"/>
+          <xs:element name="initialNumber" type="xs:string"/>
+          <xs:element name="finalNumber" type="xs:string"/>
+          <xs:element name="isEnable" type="xs:string"/>
+          <xs:element name="rowStatus" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="company">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="number" type="xs:string"/>
+          <xs:element name="status" type="xs:string"/>
+          <xs:element name="email" type="xs:string"/>
+          <xs:element name="configuration" type="tns:configuration"/>
+          <xs:element name="properties" type="tns:properties"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="configuration">
+        <xs:sequence>
+          <xs:element name="senderConfiguration" type="tns:senderConfiguration"/>
+          <xs:element name="governmentConfiguration" type="tns:governmentConfiguration"/>
+          <xs:element name="billingPlanConfiguration" type="tns:billingPlanConfiguration"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="senderConfiguration">
+        <xs:sequence>
+          <xs:element name="maxExternalUsers" type="xs:int"/>
+          <xs:element minOccurs="0" name="outputChannelEmail" type="tns:outputChannelEmail"/>
+          <xs:element minOccurs="0" name="inputChannelEmail" type="tns:inputChannelEmail"/>
+          <xs:element name="publishTimeLimit" type="xs:string"/>
+          <xs:element name="cancellationsStatementTime" type="xs:string"/>
+          <xs:element name="notificateCommercialStatusReport" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="commercialStatusReportNotificationTime" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="commercialStatusReportNotificationEmails" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="outputChannelEmail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="host" type="xs:string"/>
+          <xs:element minOccurs="0" name="password" type="xs:string"/>
+          <xs:element minOccurs="0" name="port" type="xs:string"/>
+          <xs:element minOccurs="0" name="protocol" type="xs:string"/>
+          <xs:element name="ssl" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="inputChannelEmail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="email" type="xs:string"/>
+          <xs:element minOccurs="0" name="host" type="xs:string"/>
+          <xs:element minOccurs="0" name="password" type="xs:string"/>
+          <xs:element minOccurs="0" name="port" type="xs:string"/>
+          <xs:element minOccurs="0" name="protocol" type="xs:string"/>
+          <xs:element name="ssl" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="governmentConfiguration">
+        <xs:sequence>
+          <xs:element name="obliged" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="billingPlanConfiguration">
+        <xs:sequence>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="properties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="property" type="tns:property"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="property">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="value" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="checkAvaliableDocumentsResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="AvaliableDocument" type="tns:avaliableDocument"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="avaliableDocument">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="documentPrefix" type="xs:string"/>
+          <xs:element minOccurs="0" name="documentType" type="xs:string"/>
+          <xs:element minOccurs="0" name="downloadData" type="xs:string"/>
+          <xs:element minOccurs="0" name="senderIdentification" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="downloadAvaliableDocumentsRequest">
+        <xs:sequence>
+          <xs:element name="companyId" type="xs:string"/>
+          <xs:element name="resourceType" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" name="AvaliableDocument" type="tns:avaliableDocument"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="downloadAvaliableDocumentsResponse">
+        <xs:sequence>
+          <xs:element name="status" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" name="AvaliableDocument" type="tns:avaliableDocument"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DocumentStatusByNumberResponse" nillable="true">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="processName" type="xs:string"/>
+            <xs:element name="processStatus" type="xs:string"/>
+            <xs:element minOccurs="0" name="processDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="messageType" type="xs:string"/>
+            <xs:element minOccurs="0" name="errorMessage" type="xs:string"/>
+            <xs:element minOccurs="0" name="legalStatus" type="xs:string"/>
+            <xs:element minOccurs="0" name="governmentResponseCode" type="xs:string"/>
+            <xs:element minOccurs="0" name="governmentResponseDescription" type="xs:string"/>
+            <xs:element minOccurs="0" name="governmentObservations" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidateSentFiles">
+    <wsdl:part element="ns1:ReceivedDocumentsRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UploadResolutionResponse">
+    <wsdl:part element="ns1:UploadResolutionResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InvoiceServiceFaultException">
+    <wsdl:part element="ns1:InvoiceServiceFault" name="InvoiceServiceFaultException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DocumentStatusByNumber">
+    <wsdl:part element="ns1:DocumentStatusByNumberRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DocumentStatusByNumberResponse">
+    <wsdl:part element="ns1:DocumentStatusByNumberResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UploadSync">
+    <wsdl:part element="ns1:UploadSyncRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Upload">
+    <wsdl:part element="ns1:UploadRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UploadLogFiles">
+    <wsdl:part element="ns1:UploadLogFilesRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UploadLogFilesResponse">
+    <wsdl:part element="ns1:UploadLogFilesResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DownloadResponse">
+    <wsdl:part element="ns1:DownloadResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UploadResolution">
+    <wsdl:part element="ns1:UploadResolutionRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UploadCompany">
+    <wsdl:part element="ns1:UploadCompanyRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ValidateSentFilesResponse">
+    <wsdl:part element="ns1:ReceivedDocumentsResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UploadSyncResponse">
+    <wsdl:part element="ns1:UploadSyncResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DownloadAvaliableDocuments">
+    <wsdl:part element="ns1:DownloadAvaliableDocumentsRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Download">
+    <wsdl:part element="ns1:DownloadRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DownloadReceiver">
+    <wsdl:part element="ns1:DownloadReceiverRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UploadResponse">
+    <wsdl:part element="ns1:UploadResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DocumentStatus">
+    <wsdl:part element="ns1:DocumentStatusRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DocumentStatusResponse">
+    <wsdl:part element="ns1:DocumentStatusResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UpdateAppMobile">
+    <wsdl:part element="ns1:UpdateAppMobileRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UploadCompanyResponse">
+    <wsdl:part element="ns1:UploadCompanyResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CheckAvaliableDocuments">
+    <wsdl:part element="ns1:CheckAvaliableDocumentsRequest" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CheckAvaliableDocumentsResponse">
+    <wsdl:part element="ns1:CheckAvaliableDocumentsResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DownloadReceiverResponse">
+    <wsdl:part element="ns1:DownloadReceiverResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UpdateAppMobileResponse">
+    <wsdl:part element="ns1:UpdateAppMobileResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DownloadAvaliableDocumentsResponse">
+    <wsdl:part element="ns1:DownloadAvaliableDocumentsResponse" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="invoiceService">
+    <wsdl:operation name="ValidateSentFiles">
+      <wsdl:input message="ns1:ValidateSentFiles" name="ValidateSentFiles"></wsdl:input>
+      <wsdl:output message="ns1:ValidateSentFilesResponse" name="ValidateSentFilesResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentStatusByNumber">
+      <wsdl:input message="ns1:DocumentStatusByNumber" name="DocumentStatusByNumber"></wsdl:input>
+      <wsdl:output message="ns1:DocumentStatusByNumberResponse" name="DocumentStatusByNumberResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadSync">
+      <wsdl:input message="ns1:UploadSync" name="UploadSync"></wsdl:input>
+      <wsdl:output message="ns1:UploadSyncResponse" name="UploadSyncResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Upload">
+      <wsdl:input message="ns1:Upload" name="Upload"></wsdl:input>
+      <wsdl:output message="ns1:UploadResponse" name="UploadResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadLogFiles">
+      <wsdl:input message="ns1:UploadLogFiles" name="UploadLogFiles"></wsdl:input>
+      <wsdl:output message="ns1:UploadLogFilesResponse" name="UploadLogFilesResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadResolution">
+      <wsdl:input message="ns1:UploadResolution" name="UploadResolution"></wsdl:input>
+      <wsdl:output message="ns1:UploadResolutionResponse" name="UploadResolutionResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadCompany">
+      <wsdl:input message="ns1:UploadCompany" name="UploadCompany"></wsdl:input>
+      <wsdl:output message="ns1:UploadCompanyResponse" name="UploadCompanyResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadReceiver">
+      <wsdl:input message="ns1:DownloadReceiver" name="DownloadReceiver"></wsdl:input>
+      <wsdl:output message="ns1:DownloadReceiverResponse" name="DownloadReceiverResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentStatus">
+      <wsdl:input message="ns1:DocumentStatus" name="DocumentStatus"></wsdl:input>
+      <wsdl:output message="ns1:DocumentStatusResponse" name="DocumentStatusResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAppMobile">
+      <wsdl:input message="ns1:UpdateAppMobile" name="UpdateAppMobile"></wsdl:input>
+      <wsdl:output message="ns1:UpdateAppMobileResponse" name="UpdateAppMobileResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAvaliableDocuments">
+      <wsdl:input message="ns1:CheckAvaliableDocuments" name="CheckAvaliableDocuments"></wsdl:input>
+      <wsdl:output message="ns1:CheckAvaliableDocumentsResponse" name="CheckAvaliableDocumentsResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadAvaliableDocuments">
+      <wsdl:input message="ns1:DownloadAvaliableDocuments" name="DownloadAvaliableDocuments"></wsdl:input>
+      <wsdl:output message="ns1:DownloadAvaliableDocumentsResponse" name="DownloadAvaliableDocumentsResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Download">
+      <wsdl:input message="ns1:Download" name="Download"></wsdl:input>
+      <wsdl:output message="ns1:DownloadResponse" name="DownloadResponse"></wsdl:output>
+      <wsdl:fault message="ns1:InvoiceServiceFaultException" name="InvoiceServiceFaultException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint></con:endpoints><con:operation id="50d865a1-6c4e-4c65-a916-a66056b7057d" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/CheckAvaliableDocuments" name="CheckAvaliableDocuments" bindingOperationName="CheckAvaliableDocuments" type="Request-Response" outputName="CheckAvaliableDocumentsResponse" inputName="CheckAvaliableDocuments" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ade982be-7bf0-4121-9d18-018c2c1c6165" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+            <wsse:Username>Usuario</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Pass sha-256</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">3333ASDsfffffssss3434343434sdsdsdaaaddddddsdsdLYw==</wsse:Nonce>
+            <wsu:Created>2017-07-18T15:35:36.396-05:00</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+	<soapenv:Body>
+      <inv:CheckAvaliableDocumentsRequest>
+         <companyId>860000580</companyId>
+         <initialDate>2017-06-01T10:36:00</initialDate>
+         <finalDate>2017-07-05T13:36:00</finalDate>
+         <resourceType>INVOICE_DOCUMENT_TRANSFORMED</resourceType>
+      </inv:CheckAvaliableDocumentsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/CheckAvaliableDocuments"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="9cc1dc6e-bbf1-4b07-903c-b91efc8367b6" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/DocumentStatus" name="DocumentStatus" bindingOperationName="DocumentStatus" type="Request-Response" outputName="DocumentStatusResponse" inputName="DocumentStatus" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="47cc0f5f-1235-4ad0-b736-417ddd15ff15" name="PROD-Request xml"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+<soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+            <wsse:Username>ctysprod@kuehne-nagel.com</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+            <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+     <soapenv:Body>
+      <inv:DocumentStatusRequest>
+          <companyId>800039996</companyId>
+         <accountId>800039996_01</accountId>
+        <transactionId>1b1685de858c403994fe017542704434</transactionId>
+      </inv:DocumentStatusRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DocumentStatus"/><con:wsrmConfig version="1.2"/></con:call><con:call id="1b2dea1a-9d48-4c0b-be13-4e743ded7068" name="TEST-Request xml"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+<soapenv:Header>
+ 		<wsse:Security>
+			<wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+	            	<wsse:Username>ctystest@kuehne-nagel.com</wsse:Username>
+            		<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8</wsse:Password>
+            		<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+            		<wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+	         </wsse:UsernameToken>
+		</wsse:Security>
+   </soapenv:Header>
+     <soapenv:Body>
+      <inv:DocumentStatusRequest>
+          <companyId>800039996</companyId>
+         <accountId>800039996_01</accountId>
+        <transactionId>1adcf34d6db64731a7d4af99d30d04e6</transactionId>
+      </inv:DocumentStatusRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DocumentStatus"/><con:wsrmConfig version="1.2"/></con:call><con:call id="8df8f3d5-e262-4d5e-bb9d-74bcb3ad8aa1" name="TEST-Aduanas"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:inv="http://invoice.carvajal.com/invoiceService/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header>
+         <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+			<wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+	         <wsse:Username>ctystesta@kuehne-nagel.com</wsse:Username>
+	         <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">794CAC5BBA7FD7564EA62DFF4711ECB50E3F43C9EEFFBA31B2A1EC00975B0525</wsse:Password>
+	         <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+	         <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+	         </wsse:UsernameToken>
+         </wsse:Security>
+     </soapenv:Header>
+     <soapenv:Body>
+      <inv:DocumentStatusRequest>
+          	<companyId>830074208</companyId>
+               <accountId>830074208_01</accountId>
+        <transactionId>af5685ca799b4379bdf81ba07da4227f</transactionId>
+      </inv:DocumentStatusRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DocumentStatus"/><con:wsrmConfig version="1.2"/></con:call><con:call id="80c60485-dc45-46b5-bb9c-4af445a39a60" name="PROD-ADUANAS"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+       <soapenv:Header>
+              <wsse:Security>
+                     <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+                     <wsse:Username>ctysproda@kuehne-nagel.com</wsse:Username>
+                     <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+                     <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+                     <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+                </wsse:UsernameToken>
+              </wsse:Security>
+       </soapenv:Header>
+       <soapenv:Body>
+       <inv:DocumentStatusRequest>
+           <companyId>830074208</companyId>
+           <accountId>830074208_01</accountId>
+           <transactionId>c10a445314ee4f4eaf7cd9ec81a870c7</transactionId>
+       </inv:DocumentStatusRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DocumentStatus"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="395ef787-2b39-4a2c-aa26-266a0e0974c1" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/DocumentStatusByNumber" name="DocumentStatusByNumber" bindingOperationName="DocumentStatusByNumber" type="Request-Response" outputName="DocumentStatusByNumberResponse" inputName="DocumentStatusByNumber" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6e851942-7482-4889-96b0-21aeeaeb801d" name="INV-PROD"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soapenv:Header>
+		<wsse:Security>
+			<wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+	            	<wsse:Username>ctysprod@kuehne-nagel.com</wsse:Username>
+            		<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+            		<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+            		<wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+	         </wsse:UsernameToken>
+		</wsse:Security>
+	</soapenv:Header>
+	<soapenv:Body>
+		<inv:DocumentStatusByNumberRequest>
+			<companyId>800039996</companyId>
+         		<accountId>800039996_01</accountId>
+			<documentType>FV</documentType>
+			<documentPrefix/>
+			<documentNumber>CBOT100088117</documentNumber>
+		</inv:DocumentStatusByNumberRequest>
+	</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DocumentStatusByNumber"/><con:wsrmConfig version="1.2"/></con:call><con:call id="a2817d3a-f457-4c68-99ac-2706b7babfe4" name="INV-TEST"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soapenv:Header>
+		<wsse:Security>
+			<wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+	            	<wsse:Username>ctystest@kuehne-nagel.com</wsse:Username>
+            		<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+            		<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+            		<wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+	         </wsse:UsernameToken>
+		</wsse:Security>
+	</soapenv:Header>
+	<soapenv:Body>
+		<inv:DocumentStatusByNumberRequest>
+			<companyId>800039996</companyId>
+         		<accountId>800039996_01</accountId>
+			<documentType>FV</documentType>
+			<documentPrefix/>
+			<documentNumber>800505050</documentNumber>
+		</inv:DocumentStatusByNumberRequest>
+	</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DocumentStatusByNumber"/><con:wsrmConfig version="1.2"/></con:call><con:call id="8880d27b-3136-4e0f-b014-09bc7d9046a0" name="NC-TEST"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soapenv:Header>
+		<wsse:Security>
+			<wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+	            	<wsse:Username>ctystest@kuehne-nagel.com</wsse:Username>
+            		<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+            		<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+            		<wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+	         </wsse:UsernameToken>
+		</wsse:Security>
+	</soapenv:Header>
+	<soapenv:Body>
+		<inv:DocumentStatusByNumberRequest>
+			<companyId>800039996</companyId>
+         		<accountId>800039996_01</accountId>
+			<documentType>NC</documentType>
+			<documentPrefix/>
+			<documentNumber>800505028</documentNumber>
+		</inv:DocumentStatusByNumberRequest>
+	</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DocumentStatusByNumber"/><con:wsrmConfig version="1.2"/></con:call><con:call id="a133959f-fed4-407a-b7c2-a93ebbd90fd3" name="NC-PROD"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soapenv:Header>
+		<wsse:Security>
+			<wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+	            	<wsse:Username>ctysprod@kuehne-nagel.com</wsse:Username>
+            		<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+            		<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+            		<wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+	         </wsse:UsernameToken>
+		</wsse:Security>
+	</soapenv:Header>
+	<soapenv:Body>
+		<inv:DocumentStatusByNumberRequest>
+			<companyId>800039996</companyId>
+         		<accountId>800039996_01</accountId>
+			<documentType>NC</documentType>
+			<documentPrefix/>
+			<documentNumber>800505028</documentNumber>
+		</inv:DocumentStatusByNumberRequest>
+	</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DocumentStatusByNumber"/><con:wsrmConfig version="1.2"/></con:call><con:call id="09d72da1-b634-4dc4-bade-50a1c00337e2" name="INV-TEST-ADUANAS"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soapenv:Header>
+     	<wsse:Security>
+          <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+          <wsse:Username>ctystesta@kuehne-nagel.com</wsse:Username>
+          <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">794CAC5BBA7FD7564EA62DFF4711ECB50E3F43C9EEFFBA31B2A1EC00975B0525</wsse:Password>
+          <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+          <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+          </wsse:UsernameToken>
+          </wsse:Security>
+     </soapenv:Header>
+     <soapenv:Body>
+     	<inv:DocumentStatusByNumberRequest>
+          	<companyId>830074208</companyId>
+               <accountId>830074208_01</accountId>
+               <documentType>FV</documentType>
+               <documentPrefix/>
+               <documentNumber>SETT20010</documentNumber>
+		</inv:DocumentStatusByNumberRequest>
+	</soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DocumentStatusByNumber"/><con:wsrmConfig version="1.2"/></con:call><con:call id="5765a994-22a0-48e3-8e56-ab5ea3e6bd73" name="INV-PROD-ADUANAS"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+       <soapenv:Header>
+              <wsse:Security>
+                     <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+                     <wsse:Username>ctysproda@kuehne-nagel.com</wsse:Username>
+                     <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+                     <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+                     <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+                </wsse:UsernameToken>
+              </wsse:Security>
+       </soapenv:Header>
+       <soapenv:Body>
+              <inv:DocumentStatusByNumberRequest>
+                     <companyId>830074208</companyId>
+                     <accountId>830074208_01</accountId>
+                     <documentType>FV</documentType>
+                     <documentPrefix/>
+                     <documentNumber>ACTG100001058</documentNumber>
+              </inv:DocumentStatusByNumberRequest>
+       </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DocumentStatusByNumber"/><con:wsrmConfig version="1.2"/></con:call><con:call id="bddde00a-50e4-47f0-9f59-3096a4dcfa86" name="NC-PROD-ADUANAS"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+       <soapenv:Header>
+              <wsse:Security>
+                     <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+                     <wsse:Username>ctysproda@kuehne-nagel.com</wsse:Username>
+                     <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+                     <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+                     <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+                </wsse:UsernameToken>
+              </wsse:Security>
+       </soapenv:Header>
+       <soapenv:Body>
+              <inv:DocumentStatusByNumberRequest>
+                     <companyId>830074208</companyId>
+                     <accountId>830074208_01</accountId>
+                     <documentType>NC</documentType>
+                     <documentPrefix/>
+                     <documentNumber>CBAQ100000098</documentNumber>
+              </inv:DocumentStatusByNumberRequest>
+       </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DocumentStatusByNumber"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="a31c22b1-9bf0-4c19-bf46-35e576d61373" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/Download" name="Download" bindingOperationName="Download" type="Request-Response" outputName="DownloadResponse" inputName="Download" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8f17c0b5-2f1b-4a58-89df-ccfce033c636" name="NC-PROD"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	 <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+            <wsse:Username>ctysprod@kuehne-nagel.com</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>	       <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+	       <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>\r
+      <inv:DownloadRequest>\r
+      	<companyId>800039996</companyId>
+         	<accountId>800039996_01</accountId>
+		<documentType>NC</documentType>
+		<documentNumber>800000001</documentNumber>
+          <resourceType>RESPONSE_FILE</resourceType>
+      </inv:DownloadRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/Download"/><con:wsrmConfig version="1.2"/></con:call><con:call id="477c7675-9e73-4e1f-9bee-351699ea6efd" name="NC-TEST"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	 <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+            <wsse:Username>ctystest@kuehne-nagel.com</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+            <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>\r
+      <inv:DownloadRequest>\r
+      	<companyId>800039996</companyId>
+         	<accountId>800039996_01</accountId>
+		<documentType>NC</documentType>
+		<documentNumber>800000001</documentNumber>
+          <resourceType>RESPONSE_FILE</resourceType>\r
+      </inv:DownloadRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/Download"/><con:wsrmConfig version="1.2"/></con:call><con:call id="706bc0ad-b999-43c1-a28d-a4ad8fd0de57" name="INV-PROD"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	 <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+            <wsse:Username>ctysprod@kuehne-nagel.com</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+            <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>\r
+      <inv:DownloadRequest>\r
+      	<companyId>800039996</companyId>
+         	<accountId>800039996_01</accountId>
+		<documentType>FE</documentType>
+		<documentNumber>CBOT100087520</documentNumber>
+          <resourceType>RESPONSE_FILE</resourceType>
+      </inv:DownloadRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/Download"/><con:wsrmConfig version="1.2"/></con:call><con:call id="231bddf5-ca49-4de7-ac70-634559c7febe" name="INV-TEST"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	 <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+            <wsse:Username>ctystest@kuehne-nagel.com</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+            <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>\r
+      <inv:DownloadRequest>\r
+      	<companyId>800039996</companyId>
+         	<accountId>800039996_01</accountId>
+		<documentType>FV</documentType>
+		<documentNumber>PRUE980255011</documentNumber>
+          <resourceType>RESPONSE_FILE</resourceType>
+      </inv:DownloadRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/Download"/><con:wsrmConfig version="1.2"/></con:call><con:call id="7f6230c2-4396-4ac5-a191-bb07f45e32b9" name="INV-TEST Aduanas"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soapenv:Header>
+     	<wsse:Security>
+          <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+          <wsse:Username>ctystesta@kuehne-nagel.com</wsse:Username>
+          <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">794CAC5BBA7FD7564EA62DFF4711ECB50E3F43C9EEFFBA31B2A1EC00975B0525</wsse:Password>
+          <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+          <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+          </wsse:UsernameToken>
+          </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>\r
+    		<inv:DownloadRequest>\r
+          	<companyId>830074208</companyId>
+               <accountId>830074208_01</accountId>
+			<documentType>FV</documentType>
+			<documentNumber>SETT20010</documentNumber>
+        		<resourceType>RESPONSE_FILE</resourceType>
+      	</inv:DownloadRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/Download"/><con:wsrmConfig version="1.2"/></con:call><con:call id="e821bbbd-e28f-4a80-a14a-467b0d6b7006" name="INV-PROD-ADUANAS"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <soapenv:Header>
+           <wsse:Security>
+                  <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+                  <wsse:Username>ctysproda@kuehne-nagel.com</wsse:Username>
+                  <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+                  <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+                  <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+             </wsse:UsernameToken>
+           </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>
+    		<inv:DownloadRequest>
+          	<companyId>830074208</companyId>
+               <accountId>830074208_01</accountId>
+			<documentType>FV</documentType>
+			<documentNumber>ACTG100001057</documentNumber>
+        		<resourceType>RESPONSE_FILE</resourceType>
+      	</inv:DownloadRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/Download"/><con:wsrmConfig version="1.2"/></con:call><con:call id="794e7386-c3a8-4501-8893-e1009935d4e4" name="NC-PROD-ADUANAS"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <soapenv:Header>
+           <wsse:Security>
+                  <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+                  <wsse:Username>ctysproda@kuehne-nagel.com</wsse:Username>
+                  <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+                  <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+                  <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+             </wsse:UsernameToken>
+           </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>
+    		<inv:DownloadRequest>
+          	<companyId>830074208</companyId>
+               <accountId>830074208_01</accountId>
+			<documentType>NC</documentType>
+			<documentNumber>PRUE980250161</documentNumber>
+        		<resourceType>RESPONSE_FILE</resourceType>
+      	</inv:DownloadRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/Download"/><con:wsrmConfig version="1.2"/></con:call><con:call id="16555651-eff5-46a8-aec4-0c7567e12c5c" name="INV-TEST Aduanas ver error"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soapenv:Header>
+     	<wsse:Security>
+          <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+          <wsse:Username>ctystesta@kuehne-nagel.com</wsse:Username>
+          <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">794CAC5BBA7FD7564EA62DFF4711ECB50E3F43C9EEFFBA31B2A1EC00975B0525</wsse:Password>
+          <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+          <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+          </wsse:UsernameToken>
+          </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>\r
+    		<inv:DownloadRequest>\r
+          	<companyId>830074208</companyId>
+               <accountId>830074208_01</accountId>
+			<documentType>FV</documentType>
+			<documentNumber>SETT5000002</documentNumber>
+        		<resourceType>DIAN_RESULT</resourceType>
+      	</inv:DownloadRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/Download"/><con:wsrmConfig version="1.2"/></con:call><con:call id="5865dbbe-146b-471f-890b-14a9403d1a76" name="INV-TEST ver error"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	 <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+            <wsse:Username>ctystest@kuehne-nagel.com</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+            <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>\r
+      <inv:DownloadRequest>\r
+      	<companyId>800039996</companyId>
+         	<accountId>800039996_01</accountId>
+		<documentType>FV</documentType>
+		<documentNumber>SETT20</documentNumber>
+          <resourceType>DIAN_RESULT</resourceType>
+      </inv:DownloadRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/Download"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0a92d460-53c6-4113-a592-5b54b40104c9" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/DownloadAvaliableDocuments" name="DownloadAvaliableDocuments" bindingOperationName="DownloadAvaliableDocuments" type="Request-Response" outputName="DownloadAvaliableDocumentsResponse" inputName="DownloadAvaliableDocuments" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9a84ab4c-2382-4ebe-a30b-f62683229596" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soapenv:Header>
+		<wsse:Security>
+			<wsse:UsernameToken wsu:Id="UsernameToken-1">
+				<wsse:Username>Usuario</wsse:Username>
+				<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Pass sha 256</wsse:Password>
+				<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">MDSDSDSDsdssasdsdsdsdMGUwYWRh</wsse:Nonce>
+				<wsu:Created>2017-05-25T10:45:00.123-05:00</wsu:Created>
+			</wsse:UsernameToken>
+		</wsse:Security>
+	</soapenv:Header>
+   <soapenv:Body>\r
+      <inv:DownloadAvaliableDocumentsRequest>\r
+         <companyId>860000580</companyId>\r
+         <resourceType>SIGNED_XML</resourceType>\r
+          <AvaliableDocument>
+            <documentNumber>2180000802</documentNumber>
+            <documentType>FV</documentType>
+            <senderIdentification>900239001</senderIdentification>
+         </AvaliableDocument>
+      </inv:DownloadAvaliableDocumentsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DownloadAvaliableDocuments"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d00dcad8-fe9d-45f8-9484-5b77579e3cd9" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/DownloadReceiver" name="DownloadReceiver" bindingOperationName="DownloadReceiver" type="Request-Response" outputName="DownloadReceiverResponse" inputName="DownloadReceiver" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d4e48c2c-1bce-4e44-a0da-02a54b460bfc" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:inv="http://invoice.carvajal.com/invoiceService/"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soapenv:Header>
+		<wsse:Security>
+			<wsse:UsernameToken wsu:Id="UsernameToken-1">
+				<wsse:Username>usuariolg</wsse:Username>
+				<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">15a4917ee3dd788696fb7020bf28d547089c98ec6fab5d1deb0df748adf37e7e</wsse:Password>
+				<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+				<wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+			</wsse:UsernameToken>
+		</wsse:Security>
+	</soapenv:Header>
+   <soapenv:Body>\r
+      <inv:DownloadReceiverRequest>\r
+         <companyId>32323</companyId>\r
+         <documentType>FV</documentType>\r
+         <documentNumber>CBOT100000872</documentNumber>\r  
+         <resourceType>SIGNED_XML</resourceType>
+         <companyReceiverId>232323</companyReceiverId>    
+      </inv:DownloadReceiverRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/DownloadReceiver"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="28978518-6d92-43f1-b8b3-41f67376ff92" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/UpdateAppMobile" name="UpdateAppMobile" bindingOperationName="UpdateAppMobile" type="Request-Response" outputName="UpdateAppMobileResponse" inputName="UpdateAppMobile" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7b721dd0-3269-49ef-b4f4-f97f1a98e90a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inv="http://invoice.carvajal.com/invoiceService/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inv:UpdateAppMobileRequest>\r
+         <companyId>?</companyId>\r
+         <operativeSystemName>?</operativeSystemName>\r
+         <operativeSystemVersion>?</operativeSystemVersion>\r
+         <appVersion>?</appVersion>\r
+      </inv:UpdateAppMobileRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/UpdateAppMobile"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0d195a97-8d3a-4e1d-9fe8-15fb1fcdb5cc" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/Upload" name="Upload" bindingOperationName="Upload" type="Request-Response" outputName="UploadResponse" inputName="Upload" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d78d0a10-a02f-493a-96a5-9f52a27c0172" name="Upload"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:inv="http://invoice.carvajal.com/invoiceService/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+			<wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+	            	<wsse:Username>ctystest@kuehne-nagel.com</wsse:Username>
+            		<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">bcd18cbde233b68834e70a5dbe29c2b79901b55fd6e2c631cc331d6e1af7029f</wsse:Password>
+            		<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+            		<wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+	         </wsse:UsernameToken>
+		</wsse:Security>
+	</soapenv:Header>
+   <soapenv:Body>\r
+      <inv:UploadRequest>\r
+		<fileName>PRUE98025503920191011163431.xml</fileName>
+          <fileData>PCFbQ0RBVEFbPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pg0KPEZBQ1RVUkE+DQoJPEVOQz4NCgkJPEVOQ18xPklOVk9JQzwvRU5DXzE+DQoJCTxFTkNfMj44MDAwMzk5OTY8L0VOQ18yPg0KCQk8RU5DXzM+ODAwMDM5OTk2PC9FTkNfMz4NCgkJPEVOQ180PlVCTCAyLjE8L0VOQ180Pg0KCQk8RU5DXzU+RElBTiAyLjE8L0VOQ181Pg0KCQk8RU5DXzY+UFJVRTk4MDI1NTAzOTwvRU5DXzY+DQoJCTxFTkNfNz4yMDE5LTEwLTA4PC9FTkNfNz4NCgkJPEVOQ184PjExOjA1OjA1PC9FTkNfOD4NCgkJPEVOQ185PjAxPC9FTkNfOT4NCgkJPEVOQ18xMD5VU0Q8L0VOQ18xMD4NCgkJPEVOQ18xMT48L0VOQ18xMT4NCgkJPEVOQ18xMj48L0VOQ18xMj4NCgkJPEVOQ18xMz48L0VOQ18xMz4NCgkJPEVOQ18xND48L0VOQ18xND4NCgkJPEVOQ18xNT48L0VOQ18xNT4NCgkJPEVOQ18xNj4yMDE5LTEwLTA4PC9FTkNfMTY+DQoJCTxFTkNfMTc+PC9FTkNfMTc+DQoJCTxFTkNfMTg+PC9FTkNfMTg+DQoJCTxFTkNfMTk+PC9FTkNfMTk+DQoJCTxFTkNfMjA+MjwvRU5DXzIwPg0KCQk8RU5DXzIxPjEwPC9FTkNfMjE+DQoJCTxFTkNfMjI+PC9FTkNfMjI+DQoJPC9FTkM+DQoJPEVNST4NCgkJPEVNSV8xPjE8L0VNSV8xPg0KCQk8RU1JXzI+ODAwMDM5OTk2PC9FTUlfMj4NCgkJPEVNSV8zPjMxPC9FTUlfMz4NCgkJPEVNSV80PjQ4PC9FTUlfND4NCgkJPEVNSV81PjwvRU1JXzU+DQoJCTxFTUlfNj5LVUVITkUgJmFtcDtOQUdFTCBTLkEuPC9FTUlfNj4NCgkJPEVNSV83PktVRUhORSAmYW1wO05BR0VMIFMuQS48L0VNSV83Pg0KCQk8RU1JXzg+PC9FTUlfOD4NCgkJPEVNSV85PjwvRU1JXzk+DQoJCTxFTUlfMTA+PC9FTUlfMTA+DQoJCTxFTUlfMTE+MTE8L0VNSV8xMT4NCgkJPEVNSV8xMj5BVi4gRUxET1JBRE8gOTctMDMsIElOVC4gMTwvRU1JXzEyPg0KCQk8RU1JXzEzPkJPR09UQTwvRU1JXzEzPg0KCQk8RU1JXzE0PjwvRU1JXzE0Pg0KCQk8RU1JXzE1PkNPPC9FTUlfMTU+DQoJCTxFTUlfMTY+PC9FTUlfMTY+DQoJCTxFTUlfMTc+PC9FTUlfMTc+DQoJCTxFTUlfMTg+PC9FTUlfMTg+DQoJCTxFTUlfMTk+Qm9nb3TDoTwvRU1JXzE5Pg0KCQk8RU1JXzIwPjwvRU1JXzIwPg0KCQk8RU1JXzIxPkNvbG9tYmlhPC9FTUlfMjE+DQoJCTxFTUlfMjI+MTwvRU1JXzIyPg0KCQk8RU1JXzIzPjExMDAxPC9FTUlfMjM+DQoJCTxFTUlfMjQ+S1VFSE5FJmFtcDtOQUdFTCBTLkEuPC9FTUlfMjQ+DQoJCTxFTUlfMjU+PC9FTUlfMjU+DQoJCTxUQUM+PFRBQ18xPk8tMDU8L1RBQ18xPjwvVEFDPg0KCQk8VEFDPjxUQUNfMT5PLTA3PC9UQUNfMT48L1RBQz4NCgkJPFRBQz48VEFDXzE+Ty0wOTwvVEFDXzE+PC9UQUM+DQoJCTxUQUM+PFRBQ18xPk8tMTE8L1RBQ18xPjwvVEFDPg0KCQk8VEFDPjxUQUNfMT5PLTE1PC9UQUNfMT48L1RBQz4NCgkJPFRBQz48VEFDXzE+Ty0xMDwvVEFDXzE+PC9UQUM+DQoJCTxUQUM+PFRBQ18xPk8tMTM8L1RBQ18xPjwvVEFDPg0KCQk8VEFDPjxUQUNfMT5PLTE0PC9UQUNfMT48L1RBQz4NCgkJPFRBQz48VEFDXzE+Ty0xODwvVEFDXzE+PC9UQUM+DQoJCTxUQUM+PFRBQ18xPk8tMjE8L1RBQ18xPjwvVEFDPg0KCQk8VEFDPjxUQUNfMT5PLTI0PC9UQUNfMT48L1RBQz4NCgkJPFRBQz48VEFDXzE+Ty0yNjwvVEFDXzE+PC9UQUM+DQoJCTxUQUM+PFRBQ18xPk8tMDM8L1RBQ18xPjwvVEFDPg0KCQk8VEFDPjxUQUNfMT5PLTQwPC9UQUNfMT48L1RBQz4NCgkJPFRBQz48VEFDXzE+Ty00MTwvVEFDXzE+PC9UQUM+DQoJCTxUQUM+PFRBQ18xPk8tMTk8L1RBQ18xPjwvVEFDPg0KCQk8VEFDPjxUQUNfMT5PLTQyPC9UQUNfMT48L1RBQz4NCgkJPFRBQz48VEFDXzE+QS0wMTwvVEFDXzE+PC9UQUM+DQoJCTxUQUM+PFRBQ18xPkEtMjI8L1RBQ18xPjwvVEFDPg0KCQk8VEFDPjxUQUNfMT5BLTIzPC9UQUNfMT48L1RBQz4NCgkJPFRBQz48VEFDXzE+QS0yNTwvVEFDXzE+PC9UQUM+DQoJCTxJQ0M+DQoJCQk8SUNDXzE+NTY3NDgyMjwvSUNDXzE+DQoJCTwvSUNDPg0KCTwvRU1JPg0KCTxBRFE+DQoJCTxBRFFfMT4xPC9BRFFfMT4NCgkJPEFEUV8yPjgwMDAzOTk5NjwvQURRXzI+DQoJCTxBRFFfMz4zMTwvQURRXzM+DQoJCTxBRFFfND4yPC9BRFFfND4NCgkJPEFEUV82PlRFU1QgKE5PIFZBTElEKTwvQURRXzY+DQoJCTxBRFFfNz48L0FEUV83Pg0KCQk8QURRXzg+VEVTVCAoTk8gVkFMSUQpPC9BRFFfOD4NCgkJPEFEUV85PlRFU1QgKE5PIFZBTElEKTwvQURRXzk+DQoJCTxBRFFfMTA+Q0FMTEUgMTEzIE5vLiA3LTgwIFBJU08gNTwvQURRXzEwPg0KCQk8QURRXzEyPjwvQURRXzEyPg0KCQk8QURRXzEzPjwvQURRXzEzPg0KCQk8QURRXzE1PkNPPC9BRFFfMTU+DQoJCTxUQ1I+DQoJCQk8VENSXzE+Ty05OTwvVENSXzE+DQoJCTwvVENSPg0KCQk8Q0RBPg0KCQkJPENEQV8xPjE8L0NEQV8xPg0KCQkJPENEQV8yPlRFU1QgKE5PIFZBTElEKTwvQ0RBXzI+DQoJCQk8Q0RBXzQ+S25Db1Rlc3QuZmFjdHVyYWNpb25DbGllbnRlc0BrdWVobmUtbmFnZWwuY29tO21hcmNlbG8uZWluc3Rvc3NAa3VlaG5lLW5hZ2VsLmNvbTtqb2hhbmEuZ29uemFsZXpAa3VlaG5lLW5hZ2VsLmNvbTttYXVyaWNpby5zYW5jaGV6QGt1ZWhuZS1uYWdlbC5jb207ZWRuYS52aWxsYWxvYm9zQGt1ZWhuZS1uYWdlbC5jb207ZmxhdmlvLm51bmV6QGt1ZWhuZS1uYWdlbC5jb207Z2VybWFuLnBlc2NlQGt1ZWhuZS1uYWdlbC5jb207cGFibG8uYmFycjwvQ0RBXzQ+DQoJCTwvQ0RBPg0KCTwvQURRPg0KCTxUT1Q+DQoJCTxUT1RfMT45NTAuMDAwPC9UT1RfMT4NCgkJPFRPVF8yPlVTRDwvVE9UXzI+DQoJCTxUT1RfMz4wLjAwMDwvVE9UXzM+DQoJCTxUT1RfND5VU0Q8L1RPVF80Pg0KCQk8VE9UXzU+OTUwLjAwMDwvVE9UXzU+DQoJCTxUT1RfNj5VU0Q8L1RPVF82Pg0KCTwvVE9UPg0KCTxEUkY+DQoJCTxEUkZfND5QUlVFPC9EUkZfND4NCgk8L0RSRj4NCgk8SVREPg0KCQk8SVREXzU+MTcwNzE1MC4wMDA8L0lURF81Pg0KCQk8SVREXzY+Q09QPC9JVERfNj4NCgk8L0lURD4NCgk8UkVGPg0KCQk8UkVGXzE+QUZPPC9SRUZfMT4NCgkJPFJFRl8yPjc1MTAtMDQzOC05MDUuMDEyPC9SRUZfMj4NCgkJPFJFRl8zPjIwMTktMTAtMDg8L1JFRl8zPg0KCTwvUkVGPg0KCTxSRUY+DQoJCTxSRUZfMT5UTiA8L1JFRl8xPg0KCQk8UkVGXzI+NzUxMC0wNDM4LTkwNS4wMTI8L1JFRl8yPg0KCQk8UkVGXzM+MjAxOS0xMC0wODwvUkVGXzM+DQoJPC9SRUY+DQoJPElURT4NCgkJPElURV8xPjE8L0lURV8xPg0KCQk8SVRFXzI+ZmFsc2U8L0lURV8yPg0KCQk8SVRFXzM+MS4wMDA8L0lURV8zPg0KCQk8SVRFXzQ+V1NEPC9JVEVfND4NCgkJPElURV81Pjk1MC4wMDA8L0lURV81Pg0KCQk8SVRFXzY+VVNEPC9JVEVfNj4NCgkJPElURV83Pjk1MC4wMDA8L0lURV83Pg0KCQk8SVRFXzg+VVNEPC9JVEVfOD4NCgk8L0lURT4NCjwvRkFDVFVSQT5dXT4=</fileData>\r
+			<companyId>800039996</companyId>
+         		<accountId>800039996_01</accountId>
+      </inv:UploadRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/Upload"/><con:wsrmConfig version="1.2"/></con:call><con:call id="13eb3dba-45ea-4442-995f-2a76a54bf5bb" name="Upload Aduanas"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wscenflab.cen.biz/isows/InvoiceService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:inv="http://invoice.carvajal.com/invoiceService/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header>
+     <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+			<wsse:UsernameToken wsu:Id="UsernameToken-8CF435EEA5F0BD372D14933943963991">
+	         <wsse:Username>ctystesta@kuehne-nagel.com</wsse:Username>
+	         <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">794CAC5BBA7FD7564EA62DFF4711ECB50E3F43C9EEFFBA31B2A1EC00975B0525</wsse:Password>
+	         <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">${=System.currentTimeMillis()}</wsse:Nonce>
+	         <wsu:Created>${= def sdf = new java.text.SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ss.SSSXXX"); sdf.setTimeZone(TimeZone.getTimeZone("America/Bogota")); sdf.format(new java.util.Date())}</wsu:Created>
+	         </wsse:UsernameToken>
+         </wsse:Security>
+	</soapenv:Header>
+   <soapenv:Body>\r
+      <inv:UploadRequest>\r
+		<fileName>${= "SETT20011" + new java.text.SimpleDateFormat("YYYYMMddHHmmss").format(new java.util.Date()) + ".xml" }</fileName>
+          <fileData>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pg0KPEZBQ1RVUkE+DQoJPEVOQz4NCgkJPEVOQ18xPklOVk9JQzwvRU5DXzE+DQoJCTxFTkNfMj44MzAwNzQyMDg8L0VOQ18yPg0KCQk8RU5DXzM+OTAwOTgxNjMyPC9FTkNfMz4NCgkJPEVOQ180PlVCTCAyLjE8L0VOQ180Pg0KCQk8RU5DXzU+RElBTiAyLjE8L0VOQ181Pg0KCQk8RU5DXzY+U0VUVDIwMDExPC9FTkNfNj4NCgkJPEVOQ183PjIwMTktMTEtMjk8L0VOQ183Pg0KCQk8RU5DXzg+MDg6MjU6NTItMDU6MDA8L0VOQ184Pg0KCQk8RU5DXzk+MDE8L0VOQ185Pg0KCQk8RU5DXzEwPkNPUDwvRU5DXzEwPg0KCQk8RU5DXzE1PjE8L0VOQ18xNT4NCgkJPEVOQ18xNj4yMDE5LTExLTI5PC9FTkNfMTY+DQoJCTxFTkNfMjA+MjwvRU5DXzIwPg0KCQk8RU5DXzIxPjEwPC9FTkNfMjE+DQoJCTxFTkNfMjIvPg0KCTwvRU5DPg0KCTxFTUk+DQoJCTxFTUlfMT4xPC9FTUlfMT4NCgkJPEVNSV8yPjgzMDA3NDIwODwvRU1JXzI+DQoJCTxFTUlfMz4zMTwvRU1JXzM+DQoJCTxFTUlfND40ODwvRU1JXzQ+DQoJCTxFTUlfNj5BR0VOQ0lBIERFIEFEVUFOQVMgS04gQ09MT01CSUEgUy5BLjwvRU1JXzY+DQoJCTxFTUlfNz5BR0VOQ0lBIERFIEFEVUFOQVMgS04gQ09MT01CSUEgUy5BLjwvRU1JXzc+DQoJCTxFTUlfMTA+QVYuIEVMIERPUkFETyBOby4gOTctNTcgT0ZDLiAyMDM8L0VNSV8xMD4NCgkJPEVNSV8xMT4xMTwvRU1JXzExPg0KCQk8RU1JXzEyPkFWLiBFTCBET1JBRE8gTm8uIDk3LTU3IE9GQy4gMjAzPC9FTUlfMTI+DQoJCTxFTUlfMTM+Qk9HT1RBPC9FTUlfMTM+DQoJCTxFTUlfMTU+Q088L0VNSV8xNT4NCgkJPEVNSV8xOT5Cb2dvdMOhPC9FTUlfMTk+DQoJCTxFTUlfMjE+Q09MT01CSUE8L0VNSV8yMT4NCgkJPEVNSV8yMj4zPC9FTUlfMjI+DQoJCTxFTUlfMjM+MTEwMDE8L0VNSV8yMz4NCgkJPEVNSV8yND5BR0VOQ0lBIERFIEFEVUFOQVMgS04gQ09MT01CSUEgUy5BLjwvRU1JXzI0Pg0KCQk8VEFDPg0KCQkJPFRBQ18xPk8tMDc7Ty0wOTtPLTE1O08tMzc7Ty0xNDtPLTQ4O08tMDg7QS0yMztBLTU1PC9UQUNfMT4NCgkJPC9UQUM+DQoJCTxERkU+DQoJCQk8REZFXzE+MTEwMDE8L0RGRV8xPg0KCQkJPERGRV8yPjExPC9ERkVfMj4NCgkJCTxERkVfMz5DTzwvREZFXzM+DQoJCQk8REZFXzQ+MDAwMDAwPC9ERkVfND4NCgkJCTxERkVfNT5DT0xPTUJJQTwvREZFXzU+DQoJCQk8REZFXzY+Qm9nb3TDoTwvREZFXzY+DQoJCQk8REZFXzc+Qk9HT1RBPC9ERkVfNz4NCgkJCTxERkVfOD5BVi4gRUwgRE9SQURPIE5vLiA5Ny01NyBPRkMuIDIwMzwvREZFXzg+DQoJCTwvREZFPg0KCQk8R1RFPg0KCQkJPEdURV8xPjAxPC9HVEVfMT4NCgkJCTxHVEVfMj5JVkE8L0dURV8yPg0KCQk8L0dURT4NCgk8L0VNST4NCgk8QURRPg0KCQk8QURRXzE+MTwvQURRXzE+DQoJCTxBRFFfMj45MDA5ODE2MzI8L0FEUV8yPg0KCQk8QURRXzM+MzE8L0FEUV8zPg0KCQk8QURRXzQ+NDg8L0FEUV80Pg0KCQk8QURRXzY+RkxPUkVTIEdSQU4gQ09MT01CSUFOQSBTQVM8L0FEUV82Pg0KCQk8QURRXzc+RkxPUkVTIEdSQU4gQ09MT01CSUFOQSBTQVM8L0FEUV83Pg0KCQk8QURRXzg+RkxPUkVTIEdSQU4gQ09MT01CSUFOQSBTQVM8L0FEUV84Pg0KCQk8QURRXzk+RkxPUkVTIEdSQU4gQ09MT01CSUFOQSBTQVM8L0FEUV85Pg0KCQk8QURRXzEwPlZFUkVEQSBMQSBPVkVKQTwvQURRXzEwPg0KCQk8QURRXzExPjA1PC9BRFFfMTE+DQoJCTxBRFFfMTM+UklPTkVHUk88L0FEUV8xMz4NCgkJPEFEUV8xND4wMDAwMDA8L0FEUV8xND4NCgkJPEFEUV8xNT5DTzwvQURRXzE1Pg0KCQk8QURRXzE5PkFudGlvcXVpYTwvQURRXzE5Pg0KCQk8QURRXzIxPkNPTE9NQklBPC9BRFFfMjE+DQoJCTxBRFFfMjI+ODwvQURRXzIyPg0KCQk8QURRXzIzLz4NCgkJPFRDUj4NCgkJCTxUQ1JfMT5PLTk5PC9UQ1JfMT4NCgkJPC9UQ1I+DQoJCTxJTEE+DQoJCQk8SUxBXzE+RkxPUkVTIEdSQU4gQ09MT01CSUFOQSBTQVM8L0lMQV8xPg0KCQkJPElMQV8yPjkwMDk4MTYzMjwvSUxBXzI+DQoJCQk8SUxBXzM+MzE8L0lMQV8zPg0KCQkJPElMQV80Lz4NCgkJPC9JTEE+DQoJCTxDREE+DQoJCQk8Q0RBXzE+MTwvQ0RBXzE+DQoJCQk8Q0RBXzI+RkxPUkVTIEdSQU4gQ09MT01CSUFOQSBTQVM8L0NEQV8yPg0KCQkJPENEQV80PktuQ29UZXN0LmZhY3R1cmFjaW9uQ2xpZW50ZXNAa3VlaG5lLW5hZ2VsLmNvbTttYXVyaWNpby5zYW5jaGV6QGt1ZWhuZS1uYWdlbC5jb208L0NEQV80Pg0KCQk8L0NEQT4NCgkJPEdUQT4NCgkJCTxHVEFfMT5aWjwvR1RBXzE+DQoJCQk8R1RBXzI+Tm9tYnJlIERlIExhIEZpZ3VyYSBUcmlidXRhcmlhPC9HVEFfMj4NCgkJPC9HVEE+DQoJPC9BRFE+DQoJPFRPVD4NCgkJPFRPVF8xPjEwMDAwLjAwMDwvVE9UXzE+DQoJCTxUT1RfMj5DT1A8L1RPVF8yPg0KCQk8VE9UXzM+MTAwMDAuMDAwPC9UT1RfMz4NCgkJPFRPVF80PkNPUDwvVE9UXzQ+DQoJCTxUT1RfNT4xMTYwMC4wMDA8L1RPVF81Pg0KCQk8VE9UXzY+Q09QPC9UT1RfNj4NCgkJPFRPVF83PjExNjAwLjAwMDwvVE9UXzc+DQoJCTxUT1RfOD5DT1A8L1RPVF84Pg0KCTwvVE9UPg0KCTxUSU0+DQoJCTxUSU1fMT5mYWxzZTwvVElNXzE+DQoJCTxUSU1fMj4xNjAwLjAwMDwvVElNXzI+DQoJCTxUSU1fMz5DT1A8L1RJTV8zPg0KCQk8SU1QPg0KCQkJPElNUF8xPjAxPC9JTVBfMT4NCgkJCTxJTVBfMj4xMDAwMC4wMDA8L0lNUF8yPg0KCQkJPElNUF8zPkNPUDwvSU1QXzM+DQoJCQk8SU1QXzQ+MTYwMC4wMDA8L0lNUF80Pg0KCQkJPElNUF81PkNPUDwvSU1QXzU+DQoJCQk8SU1QXzY+MTYuMDA8L0lNUF82Pg0KCQk8L0lNUD4NCgk8L1RJTT4NCgk8RFJGPg0KCQk8RFJGXzE+MTg3NjAwMDAwMDE8L0RSRl8xPg0KCQk8RFJGXzI+MjAxOS0wMS0xOTwvRFJGXzI+DQoJCTxEUkZfMz4yMDMwLTAxLTE5PC9EUkZfMz4NCgkJPERSRl80PlNFVFQ8L0RSRl80Pg0KCQk8RFJGXzU+MTwvRFJGXzU+DQoJCTxEUkZfNj41MDAwMDAwPC9EUkZfNj4NCgk8L0RSRj4NCgk8UkVGPg0KCQk8UkVGXzE+QUZPPC9SRUZfMT4NCgkJPFJFRl8yPjc2MjAtMzk2OS05MDQuMDEyPC9SRUZfMj4NCgkJPFJFRl8zPjIwMTktMTEtMjk8L1JFRl8zPg0KCTwvUkVGPg0KCTxNRVA+DQoJCTxNRVBfMT4xPC9NRVBfMT4NCgkJPE1FUF8yPjE8L01FUF8yPg0KCTwvTUVQPg0KCTxJVEU+DQoJCTxJVEVfMT4xPC9JVEVfMT4NCgkJPElURV8yPmZhbHNlPC9JVEVfMj4NCgkJPElURV8zPjEuMDAwPC9JVEVfMz4NCgkJPElURV80PkM2MjwvSVRFXzQ+DQoJCTxJVEVfNT4xMDAwMC4wMDA8L0lURV81Pg0KCQk8SVRFXzY+Q09QPC9JVEVfNj4NCgkJPElURV83PjEwMDAwLjAwMDwvSVRFXzc+DQoJCTxJVEVfOD5DT1A8L0lURV84Pg0KCQk8SVRFXzExPkFHRU5DSUFNSUVOVE8gQURVQU5BIEVOIEVYUE88L0lURV8xMT4NCgkJPElURV8yNz4xLjAwMDwvSVRFXzI3Pg0KCQk8SVRFXzI4PkM2MjwvSVRFXzI4Pg0KCQk8SUFFPg0KCQkJPElBRV8xPjc2NTAwMDAwLTg8L0lBRV8xPg0KCQkJPElBRV8yPjAwMTwvSUFFXzI+DQoJCTwvSUFFPg0KCQk8VElJPg0KCQkJPFRJSV8xPjE2MDAuMDAwPC9USUlfMT4NCgkJCTxUSUlfMj5DT1A8L1RJSV8yPg0KCQkJPFRJSV8zPmZhbHNlPC9USUlfMz4NCgkJCTxJSU0+DQoJCQkJPElJTV8xPjAxPC9JSU1fMT4NCgkJCQk8SUlNXzI+MTYwMC4wMDA8L0lJTV8yPg0KCQkJCTxJSU1fMz5DT1A8L0lJTV8zPg0KCQkJCTxJSU1fND4xMDAwMC4wMDA8L0lJTV80Pg0KCQkJCTxJSU1fNT5DT1A8L0lJTV81Pg0KCQkJCTxJSU1fNj4xNi4wMDwvSUlNXzY+DQoJCQk8L0lJTT4NCgkJPC9USUk+DQoJPC9JVEU+DQo8L0ZBQ1RVUkE+</fileData>\r
+			<companyId>830074208</companyId>
+               <accountId>830074208_01</accountId>
+      </inv:UploadRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/Upload"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="525d02dc-7ec2-4e11-8a7d-58cbadf93644" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/UploadCompany" name="UploadCompany" bindingOperationName="UploadCompany" type="Request-Response" outputName="UploadCompanyResponse" inputName="UploadCompany" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="650f52c3-507c-425e-8ac7-a9676e5e7244" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inv="http://invoice.carvajal.com/invoiceService/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inv:UploadCompanyRequest>\r
+         <!--1 or more repetitions:-->\r
+         <company>\r
+            <name>?</name>\r
+            <number>?</number>\r
+            <status>?</status>\r
+            <email>?</email>\r
+            <configuration>\r
+               <senderConfiguration>\r
+                  <maxExternalUsers>?</maxExternalUsers>\r
+                  <!--Optional:-->\r
+                  <outputChannelEmail>\r
+                     <!--Optional:-->\r
+                     <host>?</host>\r
+                     <!--Optional:-->\r
+                     <password>?</password>\r
+                     <!--Optional:-->\r
+                     <port>?</port>\r
+                     <!--Optional:-->\r
+                     <protocol>?</protocol>\r
+                     <ssl>?</ssl>\r
+                  </outputChannelEmail>\r
+                  <!--Optional:-->\r
+                  <inputChannelEmail>\r
+                     <!--Optional:-->\r
+                     <email>?</email>\r
+                     <!--Optional:-->\r
+                     <host>?</host>\r
+                     <!--Optional:-->\r
+                     <password>?</password>\r
+                     <!--Optional:-->\r
+                     <port>?</port>\r
+                     <!--Optional:-->\r
+                     <protocol>?</protocol>\r
+                     <ssl>?</ssl>\r
+                  </inputChannelEmail>\r
+                  <publishTimeLimit>?</publishTimeLimit>\r
+                  <cancellationsStatementTime>?</cancellationsStatementTime>\r
+                  <notificateCommercialStatusReport>?</notificateCommercialStatusReport>\r
+                  <!--Optional:-->\r
+                  <commercialStatusReportNotificationTime>?</commercialStatusReportNotificationTime>\r
+                  <!--Zero or more repetitions:-->\r
+                  <commercialStatusReportNotificationEmails>?</commercialStatusReportNotificationEmails>\r
+               </senderConfiguration>\r
+               <governmentConfiguration>\r
+                  <obliged>?</obliged>\r
+               </governmentConfiguration>\r
+               <billingPlanConfiguration>\r
+                  <type>?</type>\r
+               </billingPlanConfiguration>\r
+            </configuration>\r
+            <properties>\r
+               <!--Zero or more repetitions:-->\r
+               <property>\r
+                  <!--Optional:-->\r
+                  <name>?</name>\r
+                  <!--Optional:-->\r
+                  <value>?</value>\r
+               </property>\r
+            </properties>\r
+         </company>\r
+      </inv:UploadCompanyRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/UploadCompany"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="f6df0ee3-370a-4bde-b2e3-b940cfcc019d" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/UploadLogFiles" name="UploadLogFiles" bindingOperationName="UploadLogFiles" type="Request-Response" outputName="UploadLogFilesResponse" inputName="UploadLogFiles" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="604e83bc-c1a6-4d6a-a3fb-8b6819b19fde" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inv="http://invoice.carvajal.com/invoiceService/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inv:UploadLogFilesRequest>\r
+         <companyId>?</companyId>\r
+         <!--1 or more repetitions:-->\r
+         <uploadLogFiles>\r
+            <logFileName>?</logFileName>\r
+            <logContent>cid:1282119160263</logContent>\r
+         </uploadLogFiles>\r
+      </inv:UploadLogFilesRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/UploadLogFiles"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b7db7ee4-ad89-41aa-a0ce-352820a4bb58" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/UploadResolution" name="UploadResolution" bindingOperationName="UploadResolution" type="Request-Response" outputName="UploadResolutionResponse" inputName="UploadResolution" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a9efcedc-e258-4631-819e-2f5fde04836e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inv="http://invoice.carvajal.com/invoiceService/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inv:UploadResolutionRequest>\r
+         <resolution>\r
+            <documentType>?</documentType>\r
+            <resolutionNumber>?</resolutionNumber>\r
+            <companyId>?</companyId>\r
+            <description>?</description>\r
+            <isEnable>?</isEnable>\r
+            <initialDateValidity>?</initialDateValidity>\r
+            <finalDateValidity>?</finalDateValidity>\r
+            <initialNumber>?</initialNumber>\r
+            <finalNumber>?</finalNumber>\r
+            <invoicingTechnicalKey>?</invoicingTechnicalKey>\r
+            <!--1 or more repetitions:-->\r
+            <prefix>\r
+               <prefix>?</prefix>\r
+               <oldPrefix>?</oldPrefix>\r
+               <description>?</description>\r
+               <initialNumber>?</initialNumber>\r
+               <finalNumber>?</finalNumber>\r
+               <isEnable>?</isEnable>\r
+               <rowStatus>?</rowStatus>\r
+            </prefix>\r
+         </resolution>\r
+      </inv:UploadResolutionRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/UploadResolution"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="085fe310-53cd-4f01-ba26-45db7872f76c" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/UploadSync" name="UploadSync" bindingOperationName="UploadSync" type="Request-Response" outputName="UploadSyncResponse" inputName="UploadSync" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="70e57014-c830-4ab8-8fdd-844244d90f53" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inv="http://invoice.carvajal.com/invoiceService/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inv:UploadSyncRequest>\r
+         <fileName>?</fileName>\r
+         <fileData>cid:112729337565</fileData>\r
+         <companyId>?</companyId>\r
+         <accountId>?</accountId>\r
+      </inv:UploadSyncRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/UploadSync"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="9813fa58-7f54-407a-82f2-547545743f79" isOneWay="false" action="http://invoice.carvajal.com/invoiceService/ValidateSentFiles" name="ValidateSentFiles" bindingOperationName="ValidateSentFiles" type="Request-Response" outputName="ValidateSentFilesResponse" inputName="ValidateSentFiles" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e99eecb4-06b8-4099-8cde-a9e54c437508" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://cenfinanciero.cen.biz/isows/InvoiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inv="http://invoice.carvajal.com/invoiceService/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inv:ReceivedDocumentsRequest>\r
+         <companyId>?</companyId>\r
+         <!--1 or more repetitions:-->\r
+         <receivedDocuments>\r
+            <documentNumber>?</documentNumber>\r
+            <documentType>?</documentType>\r
+            <hash>?</hash>\r
+         </receivedDocuments>\r
+      </inv:ReceivedDocumentsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://invoice.carvajal.com/invoiceService/ValidateSentFiles"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

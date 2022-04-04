@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d2529372-c81d-4755-a288-d155bece6e69" activeEnvironment="Default" name="BR - SISCOMEX" resourceRoot="${projectDir}" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="954ba900-9163-4deb-87dc-3394a13c4148" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://val.portalunico.siscomex.gov.br" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://val.portalunico.siscomex.gov.br</con:endpoint></con:endpoints><con:resource name="Consolidar-carga" path="/cct/api/ext/carga/consolidar-carga" id="d21baed1-57e7-48fc-902a-91816b756c45"><con:settings/><con:parameters/><con:method name="Consolidar-carga 1" id="9cc02c66-ff16-4269-b2c8-54bf72bdcc20" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/xml;charset=UTF-8</con:mediaType><con:status>401 403 422</con:status><con:params/><con:element>error</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:cct="http://www.pucomex.serpro.gov.br/cct">cct:operacoesConsolidacao</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:con1="https://val.portalunico.siscomex.gov.br/cct/api/ext/carga/consolidar-carga">con1:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:cct="http://www.pucomex.serpro.gov.br/cct">cct:retornoServico</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/xml; charset=UTF-8;charset=UTF-8</con:mediaType><con:status>403 422</con:status><con:params/><con:element>error</con:element></con:representation><con:request name="Consolidar Carga" id="e914954f-2bc0-4f8f-8719-5e0f6cacb359" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="eyJhbGciOiJSUzI1NiJ9.eyJleHRlbnNhbyI6IiIsInN1YiI6IjI2NjIxNjc0ODMwIiwidGlwbyI6IlBGIiwiaXAiOiIxNjUuMjI1LjM4LjI1IiwiaXNzIjoiUFJJViIsImlkY2MiOjYwNTgsIm5vbWUiOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwiaXBPcmlnZW0iOiIxNjUuMjI1LjM4LjI1IiwiZGVzY3JpY2FvIjoiTUFSQ09TIEFOVE9OSU8gUEVSRUlSQSIsInBlcmZpcyI6Ikg0c0lBQUFBQUFBQUFFMVFRUXJESUJEOFNoNGc5Sjdib2xJQ2pRWTFFQnB5a0NpaGw2U1kzRXJfM3RWbWFRLXl3LTdNN0t6ajYwaC0zZjI4eGIwZU9YZW1hVHNCam1WbzVMVUZ4VVF2QjY0Vmx0SUY1WUNMQW5GS1hDUklkVUpRUm5LU0dXbko3SS1BQTVKbDdnbXQtSmtOWHlpazdWVlRJTW94M0dubWNySU1yYjVoSmxwQnZxaHh6WjI2dEtMVGxxSWpNVHNBTGlyUFVESThhR0tQVU9kRGJhZU5ZeUh1Yy0zeU56MjNkUGl3cFFzc2NUMWlGV0xGZlZyOGVfb0FZWWNFMWtnQkFBQT0iLCJjcmVkZW5jaWFsIjo2LCJjcGYiOiIyNjYyMTY3NDgzMCIsImlhdCI6MTU2NDQyNzk1NCwiY29udHJvbGUiOjcsImhhc2giOiJjZjlkMjBmMDFiZjg3YWRmOTEwYjRhMWYwNzIwMWYxYSJ9.adh3u-wrFeHWMTEM82qxeTbT26JXb7OGadVJpZPu8HjBan5JSFFXSl5PrjF05XM97VqR3gZRzExdVxB8vFtq8-JO_PKI7sXx59GstpxmUWFD9__NKsfF546SrJy4Lp2ThugejD_AcyY7NFOX4RPgO66unGrHnD8p8WjdM8soCDPbU5WZF7T-2Mdc5Y459dEGLiTpOoMEuvnVtt7O6mCKxSj2JvM-5dDuPN9GeaqaLi3t9IbNE23oev_1E7juMdGO5llWCFvghP5lc6EUOA5iehw7jLw0Q31WLNkJJ2I-DVoV6eIpsfMf5bfI6IKkOzineUAfuBH6HI7qBoWegSpmeg"/>
+  &lt;con:entry key="X-CSRF-Token" value="l9zC/1TeWDJUOnBBvByHBfSJMfflW3mOT+LaKIiv8jMognPNzQRasfwaUxzoQgiPUpZPOJzZlhg="/>
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://val.portalunico.siscomex.gov.br</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<operacoesConsolidacao xmlns="http://www.pucomex.serpro.gov.br/cct" xmlns:xsi=" http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.pucomex.serpro.gov.br/cct Consolidacao.xsd">
+	<operacaoConsolidacao>
+	<identificacaoConsolidacao>72209128907017</identificacaoConsolidacao>
+	<numeroMRUC>9BR028864270172209128907017</numeroMRUC>
+	<tipoDeCarga>2</tipoDeCarga>
+	<cnpjConsolidador>02886427000164</cnpjConsolidador>
+		<acondicionamento>
+			<conteineres>
+				<conteiner>
+					<numeroConteiner>BMOU2843840</numeroConteiner>
+					<tara>3850.000</tara>
+					<lacres>
+						<lacre>BRA045779</lacre>
+					</lacres>
+				</conteiner>
+				<conteiner>
+					<numeroConteiner>HASU4683621</numeroConteiner>
+					<tara>3800.000</tara>
+					<lacres>
+						<lacre>MLBR3551668</lacre>
+					</lacres>
+				</conteiner>
+				<conteiner>
+					<numeroConteiner>MEDU4991826</numeroConteiner>
+					<tara>4000.000</tara>
+					<lacres>
+						<lacre>MSCFEX3946495</lacre>
+					</lacres>
+				</conteiner>
+				<conteiner>
+					<numeroConteiner>MEDU8612617</numeroConteiner>
+					<tara>3900.000</tara>
+					<lacres>
+						<lacre>MSCFEX3946494</lacre>
+					</lacres>
+				</conteiner>
+				<conteiner>
+					<numeroConteiner>TCLU2996315</numeroConteiner>
+					<tara>3940.000</tara>
+					<lacres>
+						<lacre>BRA045780</lacre>
+					</lacres>
+				</conteiner>
+			</conteineres>
+			<embalagens>
+				<embalagem>
+					<tipoEmbalagem>01</tipoEmbalagem>
+					<quantidade>12</quantidade>
+				</embalagem>
+				<embalagem>
+					<tipoEmbalagem>17</tipoEmbalagem>
+					<quantidade>4</quantidade>
+				</embalagem>
+				<embalagem>
+					<tipoEmbalagem>60</tipoEmbalagem>
+					<quantidade>47</quantidade>
+				</embalagem>
+			</embalagems>
+		</acondicionamento>
+		<documentosConsolidacao>
+			<documento>
+				<numeroDUE>18BR0006513920</numeroDUE>
+				<conhecimento>
+					<numeroConhecimento>72209128907017</numeroConhecimento>
+					<dataEmissaoConhecimento>2019-07-25</dataEmissaoConhecimento>
+					<codigoMoedaSwift>USD</codigoMoedaSwift>
+					<formaPagamentoFrete>2</formaPagamentoFrete>
+					<valorFrete>937.50</valorFrete>
+					<paisDestino>US</paisDestino>
+					<consignadoAOrdem>N</consignadoAOrdem>
+					<nomeConsignatario>AVON COSMETICOS LTDA</nomeConsignatario>
+					<enderecoConsignatario>AV. INTERLAGOS, 4300 - PREDIO ADM</enderecoConsignatario>
+				</conhecimento>
+			</documento>
+			<documento>
+				<numeroDUE>19BR0007352378</numeroDUE>
+				<conhecimento>
+					<numeroConhecimento>72209128907017</numeroConhecimento>
+					<dataEmissaoConhecimento>2019-07-25</dataEmissaoConhecimento>
+					<codigoMoedaSwift>USD</codigoMoedaSwift>
+					<formaPagamentoFrete>2</formaPagamentoFrete>
+					<valorFrete>937.50</valorFrete>
+					<paisDestino>US</paisDestino>
+					<consignadoAOrdem>N</consignadoAOrdem>
+					<nomeConsignatario>AVON COSMETICOS LTDA</nomeConsignatario>
+					<enderecoConsignatario>AV. INTERLAGOS, 4300 - PREDIO ADM</enderecoConsignatario>
+				</conhecimento>
+			</documento>
+			<documento>
+				<numeroDUE>19BR0009330690</numeroDUE>
+				<conhecimento>
+					<numeroConhecimento>72209128907017</numeroConhecimento>
+					<dataEmissaoConhecimento>2019-07-25</dataEmissaoConhecimento>
+					<codigoMoedaSwift>USD</codigoMoedaSwift>
+					<formaPagamentoFrete>2</formaPagamentoFrete>
+					<valorFrete>937.50</valorFrete>
+					<paisDestino>US</paisDestino>
+					<consignadoAOrdem>N</consignadoAOrdem>
+					<nomeConsignatario>AVON COSMETICOS LTDA</nomeConsignatario>
+					<enderecoConsignatario>AV. INTERLAGOS, 4300 - PREDIO ADM</enderecoConsignatario>
+				</conhecimento>
+			</documento>
+			<documento>
+				<numeroRUC>9BR03323576100000000000000000415919</numeroRUC>
+				<conhecimento>
+					<numeroConhecimento>72209128907017</numeroConhecimento>
+					<dataEmissaoConhecimento>2019-07-25</dataEmissaoConhecimento>
+					<codigoMoedaSwift>USD</codigoMoedaSwift>
+					<formaPagamentoFrete>2</formaPagamentoFrete>
+					<valorFrete>937.50</valorFrete>
+					<paisDestino>US</paisDestino>
+					<consignadoAOrdem>N</consignadoAOrdem>
+					<nomeConsignatario>AVON COSMETICOS LTDA</nomeConsignatario>
+					<enderecoConsignatario>AV. INTERLAGOS, 4300 - PREDIO ADM</enderecoConsignatario>
+				</conhecimento>
+			</documento>
+			<documento>
+				<numeroRUC>9BR03323576100000000000000000536912</numeroRUC>
+				<conhecimento>
+					<numeroConhecimento>72209128907017</numeroConhecimento>
+					<dataEmissaoConhecimento>2019-07-25</dataEmissaoConhecimento>
+					<codigoMoedaSwift>USD</codigoMoedaSwift>
+					<formaPagamentoFrete>2</formaPagamentoFrete>
+					<valorFrete>937.50</valorFrete>
+					<paisDestino>US</paisDestino>
+					<consignadoAOrdem>N</consignadoAOrdem>
+					<nomeConsignatario>AVON COSMETICOS LTDA</nomeConsignatario>
+					<enderecoConsignatario>AV. INTERLAGOS, 4300 - PREDIO ADM</enderecoConsignatario>
+				</conhecimento>
+			</documento>
+			<documento>
+				<numeroRUC>9BR71324792100000000000000000006513</numeroRUC>
+				<conhecimento>
+					<numeroConhecimento>72209128907017</numeroConhecimento>
+					<dataEmissaoConhecimento>2019-07-25</dataEmissaoConhecimento>
+					<codigoMoedaSwift>USD</codigoMoedaSwift>
+					<formaPagamentoFrete>2</formaPagamentoFrete>
+					<valorFrete>937.50</valorFrete>
+					<paisDestino>US</paisDestino>
+					<consignadoAOrdem>N</consignadoAOrdem>
+					<nomeConsignatario>AVON COSMETICOS LTDA</nomeConsignatario>
+					<enderecoConsignatario>AV. INTERLAGOS, 4300 - PREDIO ADM</enderecoConsignatario>
+				</conhecimento>
+			</documento>
+		</documentosConsolidacao>
+	</operacaoConsolidacao>
+</operacoesConsolidacao>]]></con:request><con:originalUri>https://val.portalunico.siscomex.gov.br/cct/api/ext/carga/consolidar-carga</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="due-ruc" path="/cct/api/ext/carga/due-ruc" id="9ad3705f-f461-47ed-ab8a-bc4c93f3a0bc"><con:settings/><con:parameters><con:parameter><con:name>nrDocumento</con:name><con:value>19BR0003194859</con:value><con:style>QUERY</con:style><con:default>19BR0003194859</con:default><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="e4bf37f7-ab35-4fa8-a1b5-50c7060b81b1" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:due="https://val.portalunico.siscomex.gov.br/cct/api/ext/carga/due-ruc">due:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:due="https://val.portalunico.siscomex.gov.br/cct/api/ext/carga/due-ruc">due:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Consultar DUE" id="3bd29b99-7d5c-49b5-a473-8a7203af126a" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="eyJhbGciOiJSUzI1NiJ9.eyJleHRlbnNhbyI6IiIsInN1YiI6IjI2NjIxNjc0ODMwIiwidGlwbyI6IlBGIiwiaXAiOiI2NC4yMTUuMjIuNTUiLCJpc3MiOiJQUklWIiwiaWRjYyI6MTMzODcsIm5vbWUiOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwiaXBPcmlnZW0iOiI2NC4yMTUuMjIuNTUiLCJkZXNjcmljYW8iOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwicGVyZmlzIjoiSDRzSUFBQUFBQUFBQUUxUVFRcURNQkQ4aWc4STlPNXRTVUlSYWlMSkNsTHhFRXlRWHJSRWI2Vl9iMHhkMjBQWTJXRm1kamY5YTR0dVh0MjRoTFhzUWNrdVA4TTRSMU9ERW9BWmNxMVNsNkdSVnlNNVFha09BU2hpazViWVZLdTZ5ZERxR3hwZ29wVmRFaGhwU2Z0bnN3SXBOM1ZuV0hlT09ObnZaa2RZS3BsTm8yamZWbFZZM1RNRWhjQUY1ZElWamJZX0Zva1YwaWJud0I2LTNJMjIwUWFaRC10WTR2NU56eVZ1emlfeEFsT1l0MUQ0VUhBWEpfY2VQdlZmTHVoSUFRQUEiLCJjcmVkZW5jaWFsIjoxLCJjcGYiOiIyNjYyMTY3NDgzMCIsImlhdCI6MTU3MDcxODE1MSwiY29udHJvbGUiOjcsImhhc2giOiIzMmNhODc1MzkyMWE0ODZhYjFmNWZiZTkwMjI3NTkyMCJ9.Kj_da6AyQ1A6X61KzdR8uAEF10gsbKwO1F-uon-8MzEj2VB5_QevuZFayzNcBKDj6Jd-_8pccXmLy53qrjha4Grg31ekL94ZglbrhcRACnSwNBaefFSPobOY4bS1rUZGHw_75KmLQ6COJ8zWEMdvAvq0qjqXIpkKj5q_Hdsw_Hz_8ivXme92IG4zO2IFb0evuqaIiajhL1dbKeUhBTYHKECDuT_aQrQRJ2K_HnT6klMPqMoLbPWxeQwzKwRj_9-FGCuz4iXdMAoYgNHC4j0SkcyyFxWblqzVTgjes4ksWBKLbnds75GCnamewvykFzU--UqWmMzQ9ax-OMKgf0e5vw"/>
+  &lt;con:entry key="X-CSRF-Token" value="H1MI1z2gpt1WXorY0WHqGtgur7tkgq1rorOrR6Ht6yJt9VL09FS16XgstoVPUlHaHrmgy7yfgIc="/>
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://portalunico.siscomex.gov.br</con:endpoint><con:request/><con:originalUri>https://val.portalunico.siscomex.gov.br/cct/api/ext/carga/due-ruc</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="nrDocumento" value="19BR0013694137" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>nrDocumento</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="mruc" path="/cct/api/ext/carga/mruc" id="e9caed1a-6507-46f3-bc00-2721a25beee5"><con:settings/><con:parameters><con:parameter><con:name>nrDocumento</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="92194d51-bf6b-45f7-bf6e-d909c5a6a8d7" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:mruc="https://val.portalunico.siscomex.gov.br/cct/api/ext/carga/mruc">mruc:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:mruc="https://val.portalunico.siscomex.gov.br/cct/api/ext/carga/mruc">mruc:Response</con:element></con:representation><con:request name="Consultar RUC Master" id="76378497-4396-4d34-a12a-e6bdb27a65b6" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="eyJhbGciOiJSUzI1NiJ9.eyJleHRlbnNhbyI6IiIsInN1YiI6IjI2NjIxNjc0ODMwIiwidGlwbyI6IlBGIiwiaXAiOiIxMDQuMTI5LjE5Mi41NCIsImlzcyI6IlBSSVYiLCJpZGNjIjo2MTg1LCJub21lIjoiTUFSQ09TIEFOVE9OSU8gUEVSRUlSQSIsImlwT3JpZ2VtIjoiMTA0LjEyOS4xOTIuNTQiLCJkZXNjcmljYW8iOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwicGVyZmlzIjoiSDRzSUFBQUFBQUFBQUZXUndXcUVNQkJBZnlqUXU3Y3htUzBCaldreWduVFpnNmpRSHJvdTZxRlEtdS1kaVdhbGw4eGtlSm04VEs0XzI5TGYxMzZZcDdXNEVsUS0ycm9sVU1iV1hqZU9nOUthQXU4TWtESXRkaG9jaHdSZ0JXVVRsQnlyd1hrMEtlVVlrTkl4Y0FUYXBMUjFsdXk3MHRZUnM0RjBxdm9tQ2lCOXktb042ekwxRGFoYmp3bGdCLXpvMUlGY1pTYWxzYW40SHFXQnhLSHh1eGs0Q1BpYUFJNlpGWFYtaGJEY1FkaXNZX3laWHZJVnZFdG1VSkc4V0FEcmRHWWw1VmNJRUNBbVlEOFd6VEVva1l6WkFSMmRIUzVIbGZJVlhNMGRtSlhxNFp2VjYzX3FQalRQNmJoOTFBWWpqemg5QUZkNXlTTVI5dERoY0ZPZll5RmYxM2sxVHV0UTJLX0h2R3o5T0M4di1QMU16YlEtLXVHanYyX1Q3LTBQZ1hHNXBTVUNBQUE9IiwiY3JlZGVuY2lhbCI6NiwiY3BmIjoiMjY2MjE2NzQ4MzAiLCJpYXQiOjE1NTM2OTcxMzEsImNvbnRyb2xlIjo3LCJoYXNoIjoiNDJjNGU0MjJiZDdiYTQ1ZWQ3YTFiZTQyNTViYmRlYTQifQ.bcABLc8zbuCyU7muRCPqB1ZYqTh-WI3t5e9vZa7_AorlhgAw45jveG7Ck67e9yLKwV4UlQxP9Z2dLZ8wmTJxRbDE5ai_tn02KfdRWx9ahIvfG2MMY7CkT4YWqtY6FZJa2P935m8FYjQWB8N4xqbMrRj82LtOf_Um7AbapGIRKPX39yVQDRLO6UWecCQ2vVtijMGSc8jNTB1MS4huPiufnAhNms2j3zD3akIjl0P6qPzW7WJgCVhkO9ZTc8nvoHwfOXAScnC7dyvbcUyMx06GnoY3R8A32ZeTc77FGmL8JkpQeRPuuZ_-fZB_iWpNuWgi8q0kXdKftP8WwWaz-YrU0w"/>
+  &lt;con:entry key="X-CSRF-Token" value="jMPpH2adup+kyG2rJuhbL5NcQejizlxN6UQkfeyOQyn4Lp0QTrXVvhhxZa0zjhWnN9KmuNrWy+Y= "/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>https://val.portalunico.siscomex.gov.br</con:endpoint><con:request/><con:originalUri>https://val.portalunico.siscomex.gov.br/cct/api/ext/carga/mruc</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="nrDocumento" value="6BR000000001RUCTESTE" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>nrDocumento</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="autenticar" path="/portal/api/autenticar" id="a6c7140e-6f6b-4090-8316-236999815ef4"><con:settings/><con:parameters/><con:method name="PROD" id="a15f929c-1d9f-4faa-b1a0-5cfa3292dbf4" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=iso-8859-1</con:mediaType><con:status>400</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:aut="https://val.portalunico.siscomex.gov.br/portal/api/autenticar">aut:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>422</con:status><con:params/><con:element xmlns:aut="https://val.portalunico.siscomex.gov.br/portal/api/autenticar">aut:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Autenticar Prod" id="3e4556fb-eb4e-4d65-80bb-5d7a5d2aad5b" mediaType="application/json" postQueryString="false" sslKeystore=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Role-Type" value="TRANSPORT" xmlns="http://eviware.com/soapui/config"/></con:setting><con:setting id="RecordRequestRepresentations">true</con:setting></con:settings><con:endpoint>https://portalunico.siscomex.gov.br</con:endpoint><con:request/><con:originalUri>https://val.portalunico.siscomex.gov.br/portal/api/autenticar</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method><con:method name="TEST" id="4fc68bdd-41b8-4b71-bfaf-d0c5fe4c9a20" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:aut="https://val.portalunico.siscomex.gov.br/portal/api/autenticar">aut:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Autenticar Test" id="eb1449da-ef0b-4e33-a962-d934838b09ca" mediaType="application/json" postQueryString="false" sslKeystore=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Role-Type" value="TRANSPORT" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://val.portalunico.siscomex.gov.br</con:endpoint><con:request/><con:originalUri>https://val.portalunico.siscomex.gov.br/portal/api/autenticar</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="due" path="/due/api/ext/due" id="90604e75-fcd9-4e95-95c0-6b543150cd6c"><con:settings/><con:parameters/><con:method name="Method 1" id="885e46b1-e246-43da-be3a-2c79f8665b35" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/><con:element xmlns:urn="urn:wco:datamodel:WCO:GoodsDeclaration:1">urn:Declaration</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>400 401</con:status><con:params/><con:element xmlns:due="https://val.portalunico.siscomex.gov.br/due/api/ext/due">due:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:urn="urn:wco:datamodel:WCO:GoodsDeclaration:1">urn:Declaration</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/xml;charset=UTF-8</con:mediaType><con:status>422</con:status><con:params/><con:element>error</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/xml; charset=UTF-8;charset=UTF-8</con:mediaType><con:status>403 422</con:status><con:params/><con:element>error</con:element></con:representation><con:request name="Registrar DUE" id="0a5acaea-d983-442e-a3dc-0ca61abf91d9" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="eyJhbGciOiJSUzI1NiJ9.eyJleHRlbnNhbyI6IiIsInN1YiI6IjI2NjIxNjc0ODMwIiwidGlwbyI6IlBGIiwiaXAiOiIxMDQuMTI5LjE5Mi41NCIsImlzcyI6IlBSSVYiLCJpZGNjIjo2MTg1LCJub21lIjoiTUFSQ09TIEFOVE9OSU8gUEVSRUlSQSIsImlwT3JpZ2VtIjoiMTA0LjEyOS4xOTIuNTQiLCJkZXNjcmljYW8iOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwicGVyZmlzIjoiSDRzSUFBQUFBQUFBQUUxUndXckRNQXo5SWNQdXVhbTJPZ3lKNDlrS2xKVWVRaFBZRG0xS2tzTmc3TjhuS1hYYml5MF9udDZUbm8tXzY5eGZsXzQ4alV0MXRKWlN3dmNHZ3JFLWtBODJ1V2p1S0FZeUZpamFOc1RVR3RmaFlWZF9ZTE43Y3ZmS3RSQVNXaVV3eXBlaXNjMWduWllRcUpRc3BtNmJiaHV4b05tUmNiNFJsQzlGLWVXQVZGZFExaVdvaGNCSGFTdERzcWdNS1NpWDByWnRRZUltYlJFZHZ4UjFtTHZnMVkzbjduZ0dzWUNheE9MdWxqQnZKWVNDSnNobGh1eWJqa0RGV0luOHA0cEJBSTd0a1E1WjVjcGs2RXFvRXBRUUdKV29wUTFyMkxWSkNibXRPYTBuWVZfVzFMWnR6WmZNOFBDU0daU18wT1h2Q21SUDVudW94T1VRelRBdTU4cGZidE84OXNNMHYtSFBvM1RqY3V2UFhfMTFIZjlPX3dhbmZtWWxBZ0FBIiwiY3JlZGVuY2lhbCI6NiwiY3BmIjoiMjY2MjE2NzQ4MzAiLCJpYXQiOjE1NTQ4MzI2NTksImNvbnRyb2xlIjo3LCJoYXNoIjoiZTM1ZGMwNzI1M2Q4YjY2NWMzZWUwNWIzYzliNjMwNjIifQ.lx0ycRDOUSpE0icoNXnWyq8DnnRF-CGLkcVlR5wX8AcW-uiEvR9SYUQ9Sj8rusR0dYEjwA92isCOXYJpFRTzI9uw3XKUcLcPOqS-qSMeJs1WpOlsJSU_GlagAeeggKpoyczZl3kINfDGsR877O3oTg9JW0RfswVUF95iUVdZC_YgRLDtSRvw1U6zh6OUccyXKVscyY_mu-It3AkVFRccB_2PyNFiqADp37pSG9IL2EjNKkJKS9RitRPoSd_dxVx0_3Lb1Rmsxfuj05ltZWiQ_K4__fdjiYhj-uLTPuCD6qA8julSNdx04o1rUZk1bSB1UXdfg5hgeF9bKcT0JRitzw"/>
+  &lt;con:entry key="X-CSRF-Token" value="hC6AdWflS/EPqW4OB0DU2ppHgRVQ5r5+yCVnZdteiKVjjx8N2ecQzZDjVh1K6L/PqWhAH12b9Sk="/>
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://val.portalunico.siscomex.gov.br</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<Declaration xmlns:ds="urn:wco:datamodel:WCO:GoodsDeclaration_DS:1" xmlns="urn:wco:datamodel:WCO:GoodsDeclaration:1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:wco:datamodel:WCO:GoodsDeclaration:1 GoodsDeclaration_1p0_DUE.xsd ">
+    <DeclarationNoNF>
+        <!-- Dados do local de despacho -->
+        <DeclarationOffice>
+            <!-- Código da Unidade Local de Despacho  -->
+            <ID listID="token">0717700</ID>
+            <Warehouse>
+                <!-- Recinto aduaneiro de Despacho  -->
+                <ID schemeID="token">7911101</ID>
+                <!-- Indicador de recinto alfandegado -->
+                <!-- 281 - em recinto alfandegado -->
+                <!-- 22  - fora de recinto alfandegado Não Domiciliar -->
+                <!-- 19 - Fora de Recinto Alfandegado Domiciliar -->
+                <TypeCode>281</TypeCode>
+            </Warehouse>
+        </DeclarationOffice>
+        <!-- Situação especial (AHZ) - Embarque antecipado = 2002 -->
+        <AdditionalInformation>
+            <StatementCode>2002</StatementCode>
+            <StatementTypeCode>AHZ</StatementTypeCode>
+        </AdditionalInformation>
+        <!-- Forma de Exportação (CUS) -->
+        <AdditionalInformation>
+            <StatementCode>1001</StatementCode>
+            <StatementTypeCode>CUS</StatementTypeCode>
+        </AdditionalInformation>
+        <!-- Via especial de Transporte (TRA) -->
+        <AdditionalInformation>
+            <StatementCode>4001</StatementCode>
+            <StatementTypeCode>TRA</StatementTypeCode>
+        </AdditionalInformation>
+        <!-- Observações Gerais (AAI) -->
+        <AdditionalInformation>
+            <!--<StatementCode></StatementCode>-->
+            <StatementDescription languageID="">observacoes emb antecipado</StatementDescription>
+            <StatementTypeCode>AAI</StatementTypeCode>
+        </AdditionalInformation>
+        <!-- Moeda -->
+        <CurrencyExchange>
+            <CurrencyTypeCode>USD</CurrencyTypeCode>
+        </CurrencyExchange>
+        <!-- cpf/cnpj do declarente -->
+        <Declarant>
+            <ID schemeID="token">02886427000164</ID>
+        </Declarant>
+        <!-- Unidade Local de Embarque -->
+        <ExitOffice>
+            <ID>0717700</ID>
+            <Warehouse>
+                <!-- Recinto aduaneiro de embarque -->
+                <ID>7911101</ID>
+                <!-- Indicador de recinto alfandegado -->
+                <!-- 281 - em recinto alfandegado -->
+                <TypeCode>281</TypeCode>
+            </Warehouse>
+        </ExitOffice>
+        <!-- Item DUE -->
+        <GoodsShipment>
+            <!-- Exportador -->
+            <Exporter>
+                <!-- Nome do Exportador -->
+                <Name>KUEHNE-NAGEL</Name>
+                <!-- CNPJ/CPF do Exportador -->
+                <ID>02886427000164</ID>
+                <Address>
+                    <!-- Código do país -->
+                    <CountryCode>AD</CountryCode>
+                    <CountrySubDivisionCode>BR-AC</CountrySubDivisionCode>
+                    <Line languageID="">Endereco do exportador de teste</Line>
+                </Address>
+            </Exporter>
+            <GovernmentAgencyGoodsItem>
+                <!-- Valor no local de embarque -->
+                <CustomsValueAmount languageID="">2000.0</CustomsValueAmount>
+                <!-- Identificador -->
+                <SequenceNumeric>0001</SequenceNumeric>
+                <!-- País de destino -->
+                <Destination>
+                    <CountryCode>US</CountryCode>
+                    <GoodsMeasure>
+                        <TariffQuantity unitCode="">1.0</TariffQuantity>
+                    </GoodsMeasure>
+                </Destination>
+                <!-- Prioridade de carga -->
+                <AdditionalInformation>
+                    <StatementCode>5001</StatementCode>
+                    <StatementDescription languageID="">p:StatementDescription</StatementDescription>
+                    <StatementTypeCode>PRI</StatementTypeCode>
+                </AdditionalInformation>
+                <Commodity>
+                    <!-- Descrição complementar -->
+                    <Description languageID="">Descrição complementar</Description>
+                    <!-- Valor da condição de venda -->
+                    <ValueAmount schemeID="token">2000.1</ValueAmount>
+                    <!-- Descrição da Mercadoria -->
+                    <CommercialDescription languageID="">Descrição mercadoria</CommercialDescription>
+                    <!-- ncm -->
+                    <Classification>
+                        <ID schemeID="token">99999999</ID>
+                        <IdentificationTypeCode>HS</IdentificationTypeCode>
+                    </Classification>
+                    <!-- atributo da ncm -->
+<!--                    <ProductCharacteristics> -->
+                        <!-- codigo do atributo -->
+<!--                        <TypeCode>ATT_1330</TypeCode> -->  
+                        <!-- descricao do atributo -->
+<!--                        <Description>1</Description> -->
+<!--                    </ProductCharacteristics> -->
+                    <!-- qtdUnidadeEstatistica do item -->
+                    <GoodsMeasure>
+                        <TypeCode>AAF</TypeCode>
+                        <TariffQuantity unitCode="">1.0</TariffQuantity>
+                    </GoodsMeasure>
+                    <!-- unidadeEstatistica do item -->
+                    <GoodsMeasure>
+                        <UnitDescription languageID="">KG</UnitDescription>
+                        <TypeCode>ABW</TypeCode>
+                        <TariffQuantity unitCode="">10</TariffQuantity>
+                    </GoodsMeasure>
+                </Commodity>
+                <!-- Peso Liquido Total -->
+                <GoodsMeasure>
+                    <NetNetWeightMeasure unitCode="">49.0</NetNetWeightMeasure>
+                </GoodsMeasure>
+                <!-- Enquadramentos  -->
+                <GovernmentProcedure>
+                    <CurrentCode schemeID="token">80000</CurrentCode>
+                </GovernmentProcedure>
+            </GovernmentAgencyGoodsItem>
+            <!-- Importador -->
+            <Importer>
+                <Name languageID="">Nome do Importador</Name>
+                <!-- País de importador -->
+                <Address>
+                    <CountryCode>US</CountryCode>
+                    <Line languageID="">Endereco no pais do importador</Line>
+                </Address>
+            </Importer>
+            <!-- Nota fiscal, codigo 388, porém em DUE de emb antecipado, informar ACG=3004 -->
+            <Invoice>
+                <TypeCode>388</TypeCode>
+                <AdditionalInformation>
+                    <StatementCode>3004</StatementCode>
+                    <StatementTypeCode>ACG</StatementTypeCode>
+                </AdditionalInformation>
+            </Invoice>
+            <!-- Condição de Venda -->
+            <TradeTerms>
+                <ConditionCode>DDP</ConditionCode>
+            </TradeTerms>
+        </GoodsShipment>
+    </DeclarationNoNF>
+</Declaration>
+]]></con:request><con:originalUri>https://val.portalunico.siscomex.gov.br/due/api/ext/due</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="documento-transporte" path="/cct/api/ext/documento-transporte" id="ced62cc0-9d48-490b-a717-df5eedc35977"><con:settings/><con:parameters><con:parameter><con:name>nrDocumento</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>tipo</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="2a5e051f-023a-470f-a72c-8077bad1ee4c" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:doc="https://portalunico.siscomex.gov.br/cct/api/ext/documento-transporte">doc:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:doc="https://portalunico.siscomex.gov.br/cct/api/ext/documento-transporte">doc:Response</con:element></con:representation><con:request name="Consultar Doc Transporte" id="23c53aac-2bc1-4c96-90a1-f30fdd3b0f56" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="eyJhbGciOiJSUzI1NiJ9.eyJleHRlbnNhbyI6IiIsInN1YiI6IjI2NjIxNjc0ODMwIiwidGlwbyI6IlBGIiwiaXAiOiI2NC4yMTUuMjIuODQiLCJpc3MiOiJQUklWIiwiaWRjYyI6MTMzODcsIm5vbWUiOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwiaXBPcmlnZW0iOiI2NC4yMTUuMjIuODQiLCJkZXNjcmljYW8iOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwicGVyZmlzIjoiSDRzSUFBQUFBQUFBQUZXUXdRckRJQXlHWDJVUElPemVtNmlNd3FwRlV5Z3JQVWlWc2tzN2JHOWo3NzQwTklNZGpGOFM4dWZYNGIyWHVHeHhXdk5XRFVxQjktYm1qUklIU2d0U2FjTGc3cGdUMWsyckpSQWFDNWdSS21tNXFweGxCY1JHV2tiVGc1QVk2WGh4YnNNR1llc0NiLXRzRGZWRDZNNzAyTVdMcXRvRWJQQVk2M29EdnhYU3Noamk0ZUZVOENid0dGb21iUDc4Y2hVeGFCakZNMVhIODBQclBJaVV0Nm1DNDV0ZWE5bGpXc3RWem5uWjh5WGxpNHBsanBfeEM2ODFSVmhJQVFBQSIsImNyZWRlbmNpYWwiOjEsImNwZiI6IjI2NjIxNjc0ODMwIiwiaWF0IjoxNTU0MTQyMzA2LCJjb250cm9sZSI6NywiaGFzaCI6IjlhNDRkZGU1NGM3ZjY1MDhhM2IzMGMyYTg2MmVjYWExIn0.VLmuh9mn2JTCZ36DLQh_-KNFeMaupVT_sBEj-h9MZiqtniS9jvD1oNTivAv4jFSLmUmrOklkE1PNoExTM5CxHXEJtK7kWQn080B7odTTNehldOnKzdXwxDueedeA7E2ORqsoBr-sJJ_l4zTJ0PP1QJFXtDebEqzFikAi2j6VUxYf9y0IXnMsr31hLlIyn70bzQWa2LMSSU4yHPSt_7pUmaCPTwKX8-LQ_kx6JJlRd-GdRbvealfgEbRFNMP8_FU1vf4p58Y5x8TwezqYRwxncsCHGNMgt0TOj0tW_YGnYy9uIpTgIXLemMuzz5n8nK4otJy4n_FEcMImXq-HEd3XfA"/>
+  &lt;con:entry key="X-CSRF-Token" value="2rXrY8OeBh8YcfAtsoKnC3I5DRPHp7z9TA+fSyM8fvePPUiNrbboY+h9HFIUmt14vNkLyQvAG4U="/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>https://portalunico.siscomex.gov.br</con:endpoint><con:request/><con:originalUri>https://portalunico.siscomex.gov.br/cct/api/ext/documento-transporte</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="tipo" value="8"/>
+  <con:entry key="nrDocumento" value="19BR0004120913"/>
+</con:parameters><con:parameterOrder><con:entry>tipo</con:entry><con:entry>nrDocumento</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="dat" path="/cct/api/ext/documento-transporte/dat" id="eb48cdf6-c2dc-4b5f-ad21-6d8fae89f7e4"><con:settings/><con:parameters><con:parameter><con:name>documentos</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="39913306-02f0-4e72-9619-2cd0e2394723" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:dat="https://portalunico.siscomex.gov.br/cct/api/ext/documento-transporte/dat">dat:Response</con:element></con:representation><con:request name="Consultar DAT" id="2da0a53f-85da-4bf4-94f7-ccda08c4fae4" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="eyJhbGciOiJSUzI1NiJ9.eyJleHRlbnNhbyI6IiIsInN1YiI6IjI2NjIxNjc0ODMwIiwidGlwbyI6IlBGIiwiaXAiOiI2NC4yMTUuMjIuODQiLCJpc3MiOiJQUklWIiwiaWRjYyI6MTMzODcsIm5vbWUiOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwiaXBPcmlnZW0iOiI2NC4yMTUuMjIuODQiLCJkZXNjcmljYW8iOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwicGVyZmlzIjoiSDRzSUFBQUFBQUFBQUZXUXdRckRJQXlHWDJVUElPemVtNmlNd3FwRlV5Z3JQVWlWc2tzN2JHOWo3NzQwTklNZGpGOFM4dWZYNGIyWHVHeHhXdk5XRFVxQjktYm1qUklIU2d0U2FjTGc3cGdUMWsyckpSQWFDNWdSS21tNXFweGxCY1JHV2tiVGc1QVk2WGh4YnNNR1llc0NiLXRzRGZWRDZNNzAyTVdMcXRvRWJQQVk2M29EdnhYU3Noamk0ZUZVOENid0dGb21iUDc4Y2hVeGFCakZNMVhIODBQclBJaVV0Nm1DNDV0ZWE5bGpXc3RWem5uWjh5WGxpNHBsanBfeEM2ODFSVmhJQVFBQSIsImNyZWRlbmNpYWwiOjEsImNwZiI6IjI2NjIxNjc0ODMwIiwiaWF0IjoxNTU0MTQyMzA2LCJjb250cm9sZSI6NywiaGFzaCI6IjlhNDRkZGU1NGM3ZjY1MDhhM2IzMGMyYTg2MmVjYWExIn0.VLmuh9mn2JTCZ36DLQh_-KNFeMaupVT_sBEj-h9MZiqtniS9jvD1oNTivAv4jFSLmUmrOklkE1PNoExTM5CxHXEJtK7kWQn080B7odTTNehldOnKzdXwxDueedeA7E2ORqsoBr-sJJ_l4zTJ0PP1QJFXtDebEqzFikAi2j6VUxYf9y0IXnMsr31hLlIyn70bzQWa2LMSSU4yHPSt_7pUmaCPTwKX8-LQ_kx6JJlRd-GdRbvealfgEbRFNMP8_FU1vf4p58Y5x8TwezqYRwxncsCHGNMgt0TOj0tW_YGnYy9uIpTgIXLemMuzz5n8nK4otJy4n_FEcMImXq-HEd3XfA"/>
+  &lt;con:entry key="X-CSRF-Token" value="2rXrY8OeBh8YcfAtsoKnC3I5DRPHp7z9TA+fSyM8fvePPUiNrbboY+h9HFIUmt14vNkLyQvAG4U="/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>https://portalunico.siscomex.gov.br</con:endpoint><con:request/><con:originalUri>https://portalunico.siscomex.gov.br/cct/api/ext/documento-transporte/dat</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="documentos" value="19BR0004120913|18BR0008242304|8BR028864271" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>documentos</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="recepcao-dat" path="/cct/api/ext/documento-transporte/recepcao-dat" id="240025d4-1797-4754-a07b-39912a525a86"><con:settings/><con:parameters/><con:method name="Method 1" id="718939a5-4fb4-450c-b81f-546124afc9bb" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>415 401</con:status><con:params/><con:element xmlns:rec="https://val.portalunico.siscomex.gov.br/cct/api/ext/documento-transporte/recepcao-dat">rec:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/><con:element xmlns:cct="http://www.pucomex.serpro.gov.br/cct">cct:recepcoesDocumentoTransporte</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=UTF-8;charset=UTF-8</con:mediaType><con:status>415</con:status><con:params/><con:element xmlns:rec="https://val.portalunico.siscomex.gov.br/cct/api/ext/documento-transporte/recepcao-dat">rec:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:cct="http://www.pucomex.serpro.gov.br/cct">cct:retornoServico</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:cct="http://www.pucomex.serpro.gov.br/cct">cct:recepcoesDocumentoTransporte</con:element></con:representation><con:request name="Recepcionar Transporte" id="11c0e72a-45f0-4411-a5af-441ebfc235cf" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="eyJhbGciOiJSUzI1NiJ9.eyJleHRlbnNhbyI6IiIsInN1YiI6IjI2NjIxNjc0ODMwIiwidGlwbyI6IlBGIiwiaXAiOiIxMDQuMTI5LjE5Mi41NCIsImlzcyI6IlBSSVYiLCJpZGNjIjo2MDU4LCJub21lIjoiTUFSQ09TIEFOVE9OSU8gUEVSRUlSQSIsImlwT3JpZ2VtIjoiMTA0LjEyOS4xOTIuNTQiLCJkZXNjcmljYW8iOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwicGVyZmlzIjoiSDRzSUFBQUFBQUFBQUVXUXdRckRJQkJFZnlVZklQU2VtNmlVUUtOQk54QWFjcEFvb1pja21OeEtfNzJyWmRPVHoyR2NuWFY4bjhtdmg1LTNlTlNqRUdBNzQ3aVFMS013dXVXYVVHa29hTlg5VXJtV0hBaXRFZ1c1QmtwbzJvNE0tSXdTbkhtZ3F5Qks2S0VSbElCZXZCR1NtanNNMTdTX0FhaU9WSzdYRFpPOUdrcVlLeXBLMER4SnhZUENuUHlGdFdXTGliMUNuY3U3emxoZ0lSNXpEZmx2OWkyZFBtenB4cGU0bnJFS3NSSS1MZjR6ZlFHS1hpdjJQUUVBQUE9PSIsImNyZWRlbmNpYWwiOjYsImNwZiI6IjI2NjIxNjc0ODMwIiwiaWF0IjoxNTU0MTQ2ODIyLCJjb250cm9sZSI6NywiaGFzaCI6IjQzZGYzZWIxMjFlZTIwZDE4Y2U2ZjIxYmRiNDJkNzU0In0.eYjS7EInQ4DyFQ9K7ADKcX1OpdC8b30z1LTue4aVlkApjAeoKB3zurAwUSBoJ1uu1jL4DjVEOngRxGpqJsgo-DVOQD6VI3PO2ehR2Y-Q__G1E72oTjfKz4dWOe301pwiJFa6gds3ZIRxcZk794DyQNfqaqKPAVFiVqapgHtSHwTMvHr2XHYQpbHT-VOq9Kz9ZVWLfArPWjar3TNLL6JvagRHL_IlJwg9rISwXuigC4HkKrueReHnDvefxz88rQoBBFaY4tqEO18ycIORdu40Y9xWVBHP1dErc5BH0eK4nBHy2Bjao8mZtewc-eClygfh5piiIH7ABuIq1nFT7SUSTQ"/>
+  &lt;con:entry key="X-CSRF-Token" value="tLVE1kh0TcjUdmrkBiAZmF4kDg0tH49CBik5v/eyvH3oFweq3qs1WUtg7x9XfZOkjvjrTxVcM5I="/>
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://val.portalunico.siscomex.gov.br</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<recepcoesDocumentoTransporte xmlns="http://www.pucomex.serpro.gov.br/cct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.pucomex.serpro.gov.br/cct RecepcaoDocumentoTransporte.xsd ">
+  <recepcaoDocumentoTransporte>
+    <identificacaoRecepcao>REC-DAT01</identificacaoRecepcao>
+    <cnpjResp>02886427000164</cnpjResp>
+    <local>
+      <codigoURF>0717600</codigoURF>
+      <codigoRA>7921301</codigoRA>
+    </local>
+    <documentosTransporte>
+      <documentoTransporte>
+        <identificacaoDocumentoTransporte>16BR0008001</identificacaoDocumentoTransporte>
+        <tipoDocumentoTransporte>04</tipoDocumentoTransporte>
+        <dataEmissaoDocumentoTransporte>2019-04-01</dataEmissaoDocumentoTransporte>
+        <dadosVeiculoConferemRecepcao>N</dadosVeiculoConferemRecepcao>	
+        <dadosUnidadeTransporteConferemRecepcao>S</dadosUnidadeTransporteConferemRecepcao>
+        <dadosConteinerConferemRecepcao>S</dadosConteinerConferemRecepcao>
+        <pesoAferido>100.000</pesoAferido>                                       
+      </documentoTransporte>
+    </documentosTransporte>
+    <transportador>
+        <cnpj>02886427000164</cnpj>
+        <cpfCondutor>99999999999</cpfCondutor>
+    </transportador>    
+    <localArmazenamento>local do armazenamento</localArmazenamento>
+    <codigoIdentCarga>6564114553</codigoIdentCarga>
+    <avariasIdentificadas>Descrição das avarias identificadas</avariasIdentificadas>
+    <divergenciasIdentificadas>Descrição das avarias identificadas</divergenciasIdentificadas>
+    <observacoesGerais>Observações Gerais</observacoesGerais>
+  </recepcaoDocumentoTransporte>
+</recepcoesDocumentoTransporte>
+]]></con:request><con:originalUri>https://val.portalunico.siscomex.gov.br/cct/api/ext/documento-transporte/recepcao-dat</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="lpco" path="/talpco/api/ext/lpco/" id="18c2b117-4292-4a59-a7c0-984a52d682c8"><con:settings/><con:parameters/><con:method name="Method 1" id="06c26dd5-0036-42f6-9c7c-78ee21af3ffd" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:lpco="https://val.portalunico.siscomex.gov.br/talpco/api/ext/lpco/">lpco:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=UTF-8;charset=UTF-8</con:mediaType><con:status>401 400</con:status><con:params/><con:element xmlns:lpco="https://val.portalunico.siscomex.gov.br/talpco/api/ext/lpco/">lpco:Fault</con:element></con:representation><con:request name="Incluir LPCO" id="47f3753c-9c09-424c-ac96-e6745fe8a340" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Autorization" value="eyJhbGciOiJSUzI1NiJ9.eyJleHRlbnNhbyI6IiIsInN1YiI6IjI2NjIxNjc0ODMwIiwidGlwbyI6IlBGIiwiaXAiOiIxMDQuMTI5LjE5Mi41NCIsImlzcyI6IlBSSVYiLCJpZGNjIjo2MDU4LCJub21lIjoiTUFSQ09TIEFOVE9OSU8gUEVSRUlSQSIsImlwT3JpZ2VtIjoiMTA0LjEyOS4xOTIuNTQiLCJkZXNjcmljYW8iOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwicGVyZmlzIjoiSDRzSUFBQUFBQUFBQUZXUXpRcURNQkNFWDhVSENQVHVMU1JCaEpwSUVrRXFIb0lKMG90SzlGYjY3dDJrYm45Ty1WaG1aMll6UEk3b2x0MU5hOWpMZ1RHck8xbmIta1lTYWxFMVZDSUthVE15S3BuQ3FVVkIzYlNjbmdJbFVjdUZBVDljMDRKbHBOSlN4Z252UkE5YWVQSzBWU1pOVHdmRFAyWnA3ZFJxWWREc0p3MDdRQ3JVeU5qOENVVF9ScU91a0k0SGZhLW9JR0lrZDEtbWJxWlYyaElmOXFtMDZXLTJOUjdPcl9GQzU3QWNvZkNoWUM3TzdqbS1BQURScmRzOUFRQUEiLCJjcmVkZW5jaWFsIjoxLCJjcGYiOiIyNjYyMTY3NDgzMCIsImlhdCI6MTU1NDgzOTE5NywiY29udHJvbGUiOjcsImhhc2giOiIwNWU0NDU3NGU5MDZkMjE4NzA5OWI0ZWRjZDBjZTY4ZiJ9.C39Y5g1IzP4OrZp265va-Gf0-5Jsyf1T4OzaHe_WE9usvVFQbVENuUgV03QGci9Ew3uFB2YOAXSTlqU6WfCJvExe1K8Ji9rjeN0BzepG2geDGjig2IYA1r3yCIxkpC9Aa82azbfhKiPpRDg8unsUfZNAsNHyddsSKNH5k921gldI4X_4M8HQa9vJCG7txinEc8sI_x32oMzp8qevMI3a7xad8mxtX1Mcwp94GoqBhsFTiP4gKKnonwkhWVjug3ok3D3TkhiVh0jtTYCN9JdzR2lmpWN-1AZAbOtkptkzMdAmhLtxIrU3uFMABLbOQBieRkc7d0RJZm0jNP03otAIlA"/>
+  &lt;con:entry key="X-CSRF-Token" value="xZgwVrqbVNrJgrwZdLYfdKrYB5NbWZW80Fny4eQWdN829BRjraifcUw1kMMQ+a+CBrWemkvyoYo="/>
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://val.portalunico.siscomex.gov.br</con:endpoint><con:request>{
+    "codigoModelo": "E00001",
+    "informacaoAdicional": "Número do alvará: 100001",
+    "dataReferencia": null,
+    "listaNcm": [
+        {
+            "ncm": "01012100",
+            "listaCamposNcm": [],
+            "listaAtributosNcm": [
+                {
+                    "codigo": "ATT_100000038",
+                    "listaValor": [ "99" ]
+                },
+                {
+                    "codigo": "ATT_100000082",
+                    "listaValor": [ "22" ]
+                }
+            ],
+            "unidadeMedidaComercializada": "KG"
+        }
+    ],
+    "listaCamposFormulario": [
+        {
+            "codigo": "CPF_CNPJ_EXPORTADOR",
+            "listaValor": [ "02886427000164" ]
+        },
+        {
+            "codigo": "QTDE_COMERCIALIZADA",
+            "listaValor": [ "10" ]
+        }       
+    ],
+    "unidadeMedidaComercializada": "KG"
+}</con:request><con:originalUri>https://val.portalunico.siscomex.gov.br/talpco/api/ext/lpco/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="Desc-erros" path="/portal/api/ext/webhook/falhas" id="28f7cff0-329c-4a14-a689-a5e4952295e3"><con:settings/><con:parameters><con:parameter><con:name>data</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="DescErros" id="4456bf77-cc23-411b-a71c-3ff1597b046d" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:fal="https://val.portalunico.siscomex.gov.br/portal/api/ext/webhook/falhas">fal:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="DescricaoErro" id="84cf31b7-5c46-42b9-a717-37932bea6e06" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="eyJhbGciOiJSUzI1NiJ9.eyJleHRlbnNhbyI6IiIsInN1YiI6IjI2NjIxNjc0ODMwIiwidGlwbyI6IlBGIiwiaXAiOiIxNjUuMjI1LjM4LjI1IiwiaXNzIjoiUFJJViIsImlkY2MiOjYwNTgsIm5vbWUiOiJNQVJDT1MgQU5UT05JTyBQRVJFSVJBIiwiaXBPcmlnZW0iOiIxNjUuMjI1LjM4LjI1IiwiZGVzY3JpY2FvIjoiTUFSQ09TIEFOVE9OSU8gUEVSRUlSQSIsInBlcmZpcyI6Ikg0c0lBQUFBQUFBQUFFMVFRUXJESUJEOFNoNGc5Sjdib2xJQ2pRWTFFQnB5a0NpaGw2U1kzRXJfM3RWbWFRLXl3LTdNN0t6ajYwaC0zZjI4eGIwZU9YZW1hVHNCam1WbzVMVUZ4VVF2QjY0Vmx0SUY1WUNMQW5GS1hDUklkVUpRUm5LU0dXbko3SS1BQTVKbDdnbXQtSmtOWHlpazdWVlRJTW94M0dubWNySU1yYjVoSmxwQnZxaHh6WjI2dEtMVGxxSWpNVHNBTGlyUFVESThhR0tQVU9kRGJhZU5ZeUh1Yy0zeU56MjNkUGl3cFFzc2NUMWlGV0xGZlZyOGVfb0FZWWNFMWtnQkFBQT0iLCJjcmVkZW5jaWFsIjo2LCJjcGYiOiIyNjYyMTY3NDgzMCIsImlhdCI6MTU2NDQyNzk1NCwiY29udHJvbGUiOjcsImhhc2giOiJjZjlkMjBmMDFiZjg3YWRmOTEwYjRhMWYwNzIwMWYxYSJ9.adh3u-wrFeHWMTEM82qxeTbT26JXb7OGadVJpZPu8HjBan5JSFFXSl5PrjF05XM97VqR3gZRzExdVxB8vFtq8-JO_PKI7sXx59GstpxmUWFD9__NKsfF546SrJy4Lp2ThugejD_AcyY7NFOX4RPgO66unGrHnD8p8WjdM8soCDPbU5WZF7T-2Mdc5Y459dEGLiTpOoMEuvnVtt7O6mCKxSj2JvM-5dDuPN9GeaqaLi3t9IbNE23oev_1E7juMdGO5llWCFvghP5lc6EUOA5iehw7jLw0Q31WLNkJJ2I-DVoV6eIpsfMf5bfI6IKkOzineUAfuBH6HI7qBoWegSpmeg"/>
+  &lt;con:entry key="X-CSRF-Token" value="l9zC/1TeWDJUOnBBvByHBfSJMfflW3mOT+LaKIiv8jMognPNzQRasfwaUxzoQgiPUpZPOJzZlhg="/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>https://val.portalunico.siscomex.gov.br</con:endpoint><con:request/><con:originalUri>https://val.portalunico.siscomex.gov.br/portal/api/ext/webhook/falhas</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="data" value="29072019" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>data</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
